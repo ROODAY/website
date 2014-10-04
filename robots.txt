@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://ROODAY.github.io/sitemap.xml 
+Sitemap: http://rooday.com/sitemap.xml 

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://ROODAY.github.io/atom.xml" rel="self"/>
-  <link href="http://ROODAY.github.io/"/>
-  <updated>2014-10-03T23:26:56-04:00</updated>
-  <id>http://ROODAY.github.io/</id>
+  <title><![CDATA[ROODAY]]></title>
+  <link href="http://rooday.com/atom.xml" rel="self"/>
+  <link href="http://rooday.com/"/>
+  <updated>2014-10-03T23:31:20-04:00</updated>
+  <id>http://rooday.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Rudhra Raveendran]]></name>
+    <email><![CDATA[rudytheninja@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
