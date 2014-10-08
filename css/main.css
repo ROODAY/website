@@ -208,6 +208,45 @@ input[type="submit"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@-webkit-keyframes roodaycolors {
+  0% {
+    color: #F4B350; }
+  20% {
+    color: #BF55EC; }
+  40% {
+    color: #3A539B; }
+  60% {
+    color: #81CFE0; }
+  80% {
+    color: #E74C3C; }
+  100% {
+    color: #F4B350; } }
+@-moz-keyframes roodaycolors {
+  0% {
+    color: #F4B350; }
+  20% {
+    color: #BF55EC; }
+  40% {
+    color: #3A539B; }
+  60% {
+    color: #81CFE0; }
+  80% {
+    color: #E74C3C; }
+  100% {
+    color: #F4B350; } }
+@keyframes roodaycolors {
+  0% {
+    color: #F4B350; }
+  20% {
+    color: #BF55EC; }
+  40% {
+    color: #3A539B; }
+  60% {
+    color: #81CFE0; }
+  80% {
+    color: #E74C3C; }
+  100% {
+    color: #F4B350; } }
 body {
   background-color: #F1F2EF;
   width: 100%;
@@ -276,6 +315,9 @@ a {
   text-align: center;
   padding-bottom: 1.25rem;
   color: #8E44AD;
+  -webkit-animation: roodaycolors 15s infinite linear;
+  -moz-animation: roodaycolors 15s infinite linear;
+  animation: roodaycolors 15s infinite linear;
   -webkit-text-fill-color: transparent;
   background: -webkit-linear-gradient(transparent, transparent), url(../assets/images/background.jpg) repeat;
   background: -o-linear-gradient(transparent, transparent);
