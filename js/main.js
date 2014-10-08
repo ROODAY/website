@@ -26,6 +26,14 @@ $(document).ready(function(){
 	    s.setAttribute('src','https://nthitz.github.io/turndownforwhatjs/tdfw.js');
 	    document.body.appendChild(s);
 	}, true);
+	listener.sequence_combo("a b a c a b b", function() {
+	    var i,s,ss = ['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];
+	    for(i=0; i!=ss.length; i++) {
+	      s = document.createElement('script');
+	      s.src = ss[i];
+	      document.body.appendChild(s);
+	    } void(0);
+	}, true);
 	var scrollAmount = $(document.body.scrollTop);
 	slideNav();
 
