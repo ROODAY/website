@@ -20,6 +20,12 @@ $(window).load(function() {
 });
 
 $(document).ready(function(){
+	var listener = new window.keypress.Listener();
+	listener.sequence_combo("up up down down left right left right b a enter", function() {
+	    var s = document.createElement('script');
+	    s.setAttribute('src','https://nthitz.github.io/turndownforwhatjs/tdfw.js');
+	    document.body.appendChild(s);
+	}, true);
 	var scrollAmount = $(document.body.scrollTop);
 	slideNav();
 
