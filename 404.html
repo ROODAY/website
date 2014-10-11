@@ -2,60 +2,163 @@
 <html>
 	<head>
 		<title>404 | File Not Found</title>
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
-		 <!-- Google Fonts -->
+		<!-- Google Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 		
+		<link rel="shortcut icon" href="assets/favicons/favicon.ico">
+		<link rel="icon" sizes="16x16 32x32 64x64" href="assets/favicons/favicon.ico">
+		<link rel="icon" type="image/png" sizes="196x196" href="assets/favicons/favicon-196.png">
+		<link rel="icon" type="image/png" sizes="160x160" href="assets/favicons/favicon-160.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96.png">
+		<link rel="icon" type="image/png" sizes="64x64" href="assets/favicons/favicon-64.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/favicon-152.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/favicon-144.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/favicon-120.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/favicon-114.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/favicon-76.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/favicon-72.png">
+		<link rel="apple-touch-icon" href="assets/favicons/favicon-57.png">
+
+
+		<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+		<link rel="stylesheet" href="css/vendor/animate.css">
+		
 		<style type="text/css">
-			html {
-				background: url(assets/images/stardust.png);
+			@-webkit-keyframes roodaygradient {
+			    0%{background-position:0% 28%}
+			    50%{background-position:100% 73%}
+			    100%{background-position:0% 28%}
+			}
+			@-moz-keyframes roodaygradient {
+			    0%{background-position:0% 28%}
+			    50%{background-position:100% 73%}
+			    100%{background-position:0% 28%}
+			}
+			@-o-keyframes roodaygradient {
+			    0%{background-position:0% 28%}
+			    50%{background-position:100% 73%}
+			    100%{background-position:0% 28%}
+			}
+			@keyframes roodaygradient { 
+			    0%{background-position:0% 28%}
+			    50%{background-position:100% 73%}
+			    100%{background-position:0% 28%}
+			}
+			@-webkit-keyframes roodaycolors {
+				0%{color: #F4B350;}
+				20%{color: #BF55EC;}
+				40%{color: #3A539B;}
+				60%{color: #81CFE0;}
+				80%{color: #E74C3C;}
+				100%{color: #F4B350;}
+			}
+			@-moz-keyframes roodaycolors {
+				0%{color: #F4B350;}
+				20%{color: #BF55EC;}
+				40%{color: #3A539B;}
+				60%{color: #81CFE0;}
+				80%{color: #E74C3C;}
+				100%{color: #F4B350;}
+			}
+			@-o-keyframes roodaycolors {
+				0%{color: #F4B350;}
+				20%{color: #BF55EC;}
+				40%{color: #3A539B;}
+				60%{color: #81CFE0;}
+				80%{color: #E74C3C;}
+				100%{color: #F4B350;}
+			}
+
+			html, body {
 				text-align: center;
-				color: #8E44AD;
-			}
-			body {
+				color: #ccc;
+				background-color: #F1F2EF;
+				font-size: 1rem;
 				margin: 0;
-				width: 100%;
-				height: 100%;
+				padding: 0;
+				overflow: hidden;
 			}
-			div {
-				margin: 0 auto;
+			#content {
+				margin: 45vh auto;
+			}
+			p {
+				font-size: 1.5rem;
+				font-family: 'Droid Sans', sans-serif;
 			}
 			h1 {
 				font-family: 'Audiowide', serif;
-				font-size: 150px;
-				font-size: 20vh;
+				font-size: 8rem;
 			}
 			h2 {
-				font-family: 'Poiret One', serif;
-				font-size: 100px;
-				font-size: 10vh;
+				font-family: 'Audiowide', serif;
+				font-size: 2.5rem;
 			}
 			a {
 				text-decoration: none;
-				color: #95A5A6;
-				-webkit-transition: color 1s ease;
-				-moz-transition: color 1s ease;
-				-o-transition: color 1s ease;
+				color: #8E44AD;
+				-webkit-transition: color 0.5s ease;
+				-moz-transition: color 0.5s ease;
+				-o-transition: color 0.5s ease;
+			}
+			a:hover, a:focus {
+				text-decoration: none;
 			}
 			a:hover {
-				color: #8E44AD;
+				color: #6C3583;
+			}
+			#wrapper {
+				position: fixed;
+				top: 0;
+				width: 100vw;
+				height: 100vh;
+				background-image: url("assets/images/background1.jpg");
+				border-image-repeat: repeat;
+			}
+			.roodaygradient {
+				-webkit-text-fill-color: transparent;
+				background: linear-gradient(304deg, #f4b350, #bf55ec, #3a539b, #81cfe0, #e74c3c);
+				background-size: 1000% 1000%;
+				-webkit-animation: roodaygradient 15s ease infinite;
+				-webkit-background-clip: text;
+			}
+			.roodaycolors {
+				-webkit-animation: roodaycolors 15s infinite linear;
+			  	-moz-animation: roodaycolors 15s infinite linear;
+			    animation: roodaycolors 15s infinite linear;
 			}
 		</style>
 	<head>
 	<body>
-		<div>
-			<h1>404 | File Not Found</h1>
-			<h2>This file either does not exist or has moved. Please return to the <a href="http://rooday.herokuapp.com">homepage</a>.</h2>
+		<div id="wrapper">
+			<div id="content">
+				<h1>Whoa, Bro</h1><br>
+				<h2>Looks like a 404</h2>
+				<p>I don't know what you were looking for, but it's not here anymore. Go back to the <a href="http://rooday.com">homepage</a>.</p>
+			</div>
 		</div>
-		<script src="js/vendor/jquery.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script>
+		  if ($.browser.webkit) {
+		    $("div>h1").addClass("roodaygradient");
+		  } else {
+		    $("div>h1").addClass("roodaycolors");
+		  }
+		</script>
 		<script>
-			console.log(window.location.href);
-			if (window.location.href === "http://rooday.github.io/") {
-				$("h1").html("We've Moved, buddy!");
-				$("h2").html("The new site is <a href='http://rooday.herokuapp.com'>here</a>!");
-			}
+		$(document).ready(function(){
+			$("#content").css("margin-top", (($(window).height() / 2) - ($("#content").height() / 2)) + "px");
+			$('body').mousemove(function(e){
+				var x = -(e.pageX + this.offsetLeft) / 20;
+				var y = -(e.pageY + this.offsetTop) / 20;
+				$("#wrapper").css('background-position', x + 'px ' + y + 'px');
+			});   
+		});
 		</script>
 	</body>
 <html>
