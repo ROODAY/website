@@ -177,6 +177,13 @@ a {
   overflow: hidden;
 }
 
+::selection {
+  background: #C663F0; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #C663F0; /* Gecko Browsers */
+}
+
   /*phones*/
 @media (max-width: 767px) {
   

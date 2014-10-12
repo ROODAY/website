@@ -324,6 +324,14 @@ a {
   -webkit-background-clip: text;
   overflow: hidden; }
 
+::selection {
+  background: #C663F0;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #C663F0;
+  /* Gecko Browsers */ }
+
 /*phones*/
 /*tablets*/
 /*small desktops/laptops*/
