@@ -143,17 +143,12 @@
 				</ul>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-6">
-				<ul id="projects">
-					<h2>Current Projects</h2>
-					<li><a href="https://github.com/ROODAY/Experiments">Web Experiments</a></li>
-					<li><a href="https://github.com/ROODAY/AniMatrix">AniMatrix</a></li>
-					<li><a href="https://github.com/WWPOL/Earth-Invader">Earth Invader</a></li>
-					<li><a href="https://github.com/ROODAY/Possircle">Possircle</a></li>
-					<li><a href="https://github.com/ROODAY/stattools">Stat Tools</a></li>
-					<li><a href="https://github.com/ROODAY/whypc">Why PC</a></li>
-					<li><a href="https://github.com/ROODAY/CodingTheHardWay">Coding the Hard Way</a></li>
-					<li><a href="https://github.com/ROODAY/Daily-Programmer">Daily Programmer</a></li>
-				</ul>
+				<section>
+				  <h2>GitHub Repos</h2>
+				  <ul id="gh_repos">
+				    <li class="loading">Status updating...</li>
+				  </ul>
+				</section>
 			</div>
 		</div>
 		<div id="hardware" class="sizeus container">
@@ -180,6 +175,24 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
 		<script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
+        <script type="text/javascript">
+		    $(document).ready(function(){
+		        if (!window.jXHR){
+		            var jxhr = document.createElement('script');
+		            jxhr.type = 'text/javascript';
+		            jxhr.src = 'js/vendor/jXHR.js';
+		            var s = document.getElementsByTagName('script')[0];
+		            s.parentNode.insertBefore(jxhr, s);
+		        }
+
+		        github.showRepos({
+		            user: 'ROODAY',
+		            count: 10,
+		            skip_forks: true,
+		            target: '#gh_repos'
+		        });
+		    });
+		  </script>
 		<script src="js/main.js"></script>
     </body>
 </html>
