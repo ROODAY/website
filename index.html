@@ -1,198 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    	<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta name="msapplication-TileColor" content="#FFFFFF">
-		<meta name="msapplication-TileImage" content="assets/favicons/favicon-144.png">
-		<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+<head>
+	<title>ROODAY</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="assets/favicons/favicon-144.png">
+	<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+	<link rel="shortcut icon" href="assets/favicons/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="assets/favicons/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="assets/favicons/favicon-196.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="assets/favicons/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="assets/favicons/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/favicon-72.png">
+	<link rel="apple-touch-icon" href="assets/favicons/favicon-57.png">
 
-        <title>ROODAY</title>
+	<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+	<link rel="import" href="bower_components/polymer/polymer.html">
+	<link rel="import" href="bower_components/core-elements/core-elements.html">
+	<link rel="import" href="bower_components/core-icons/core-icons.html">
+	<link rel="import" href="bower_components/paper-elements/paper-elements.html">
 
-		<!-- Google Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-		
-		<link rel="shortcut icon" href="assets/favicons/favicon.ico">
-		<link rel="icon" sizes="16x16 32x32 64x64" href="assets/favicons/favicon.ico">
-		<link rel="icon" type="image/png" sizes="196x196" href="assets/favicons/favicon-196.png">
-		<link rel="icon" type="image/png" sizes="160x160" href="assets/favicons/favicon-160.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96.png">
-		<link rel="icon" type="image/png" sizes="64x64" href="assets/favicons/favicon-64.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/favicon-152.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/favicon-144.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/favicon-120.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/favicon-114.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/favicon-76.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/favicon-72.png">
-		<link rel="apple-touch-icon" href="assets/favicons/favicon-57.png">
-
-
-		<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-		<link rel="stylesheet" href="css/vendor/animate.css">
-
-		<style>
-			
-		</style>
-
-		<link rel="stylesheet" href="css/main.css">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	    <!--[if lt IE 9]>
-	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	    <![endif]-->
-    </head>
-    <body>
-    	<div id="loading">
-    		<div>
-    			<h1>Loading</h1>
-		  		<img src="assets/images/loading.svg" alt="loading" width="128" height="128">
-    		</div>
-	  	</div>
-	  	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="#">ROODAY</a>
-		    </div>
-
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav navbar-right">
-		      	<li><a href="http://rooday.com/blog/">Blog</a></li>
-		        <li class="dropdown navbutton" style="display: inline-block">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						Jump To <b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenu1">
-						<li role="presentation"><a role="menuitem" tabindex="-1" id="softwarelink" href="#software">Software</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" id="hardwarelink" href="#hardware">Hardware</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" id="gfxlink" href="#gfxdesign">Graphic Design</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" id="infolink" href="#footer">Info</a></li>
-					</ul>
-				</li>
-				<li class="dropdown navbutton" style="display: inline-block">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						Social <b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenu2">
-						<li role="presentation"><a role="menuitem" tabindex="-1" id="bloglink" href="blog/index.js">Blog</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" id="facebooklink" href="https://www.facebook.com/sooperooday">Facebook</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" id="twitterlink" href="https://twitter.com/rudytheninja">Twitter</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" id="googlelink" href="https://plus.google.com/u/0/+RudyRaveendran/posts">Google+</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" id="youtubelink" href="https://www.youtube.com/user/SOOPEROODAY">Youtube</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" id="githublink" href="https://github.com/ROODAY">Github</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" id="linkedinlink" href="http://www.linkedin.com/in/rooday">LinkedIn</a></li>
-					</ul>
-				</li>
-				<li><a href="">Resume</a></li>
-		      </ul>
-		    </div>
-		  </div>
-		</nav>
-		<div id="rooday" class="sizeus">
-			<h1>ROODAY</h1>
-			<div class="container">
-				<h3>Rudhra Raveendran</h3>
-				<p id="about">
-					I'm a high school student who likes programming, video games, movies, and books. I'm also the Co-Founder and CEO of Too Much Daylight Studios, as well as the founder of FOSSphorous Studios. I'm an ENTJ according to the Myers-Briggs personality type test, and etc etc etc.
-				</p>
-				<a href="#software"><span class="glyphicon glyphicon-chevron-down"></span></a>
-			</div>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/material.css">
+	<link rel="stylesheet" href="css/critical.css?__inline=true">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="loading">
+		<div>
+			<h1>Loading</h1>
 		</div>
-		<div id="software" class="sizeus container">
-			<h1>Programming</h1>
-			<div class="col-md-6 col-sm-6 col-xs-6">
-					<h2>Languages (<span class="glyphicon glyphicon-star"></span> = Level of Mastery)</h2>
-					<table class="table borderless">
-						<tr>
-							<td>HTML &amp; CSS</td>
-							<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-						</tr>
-						<tr>
-							<td>Javascript</td>
-							<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-						</tr>
-						<tr>
-							<td>Lua</td>
-							<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-						</tr>
-						<tr>
-							<td>Ruby</td>
-							<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-						</tr>
-						<tr>
-							<td>Objective C</td>
-							<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-						</tr>
-						<tr>
-							<td>Python</td>
-							<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-						</tr>
-					</table>
+  	</div>
+  	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">ROODAY</a>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li><a href="http://rooday.com/blog/">Blog</a></li>
+	        <li class="dropdown navbutton" style="display: inline-block">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Jump To <b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenu1">
+					<li role="presentation"><a role="menuitem" tabindex="-1" id="softwarelink" href="#software">Software</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" id="hardwarelink" href="#hardware">Hardware</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" id="gfxlink" href="#gfxdesign">Graphic Design</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" id="infolink" href="#footer">Info</a></li>
 				</ul>
-			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6">
-				<section>
-				  <h2>GitHub Repos</h2>
-				  <ul id="gh_repos">
-				    <li class="loading">Status updating...</li>
-				  </ul>
-				</section>
-			</div>
-		</div>
-		<div id="hardware" class="sizeus container">
-			<h1>Hardware</h1>
-			<p>
-				Display computer, computers that I've helped build, any Pi things done by then, hopefully Project Avis will be done by then.
+			</li>
+			<li class="dropdown navbutton" style="display: inline-block">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Social <b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenu2">
+					<li role="presentation"><a role="menuitem" tabindex="-1" id="bloglink" href="blog/index.js">Blog</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" id="facebooklink" href="https://www.facebook.com/sooperooday">Facebook</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" id="twitterlink" href="https://twitter.com/rudytheninja">Twitter</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" id="googlelink" href="https://plus.google.com/u/0/+RudyRaveendran/posts">Google+</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" id="youtubelink" href="https://www.youtube.com/user/SOOPEROODAY">Youtube</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" id="githublink" href="https://github.com/ROODAY">Github</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" id="linkedinlink" href="http://www.linkedin.com/in/rooday">LinkedIn</a></li>
+				</ul>
+			</li>
+			<li><a href="">Resume</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<div id="rooday" class="sizeus">
+		<h1>ROODAY</h1>
+		<div class="container">
+			<h3>Rudhra Raveendran</h3>
+			<p id="about">
+				I'm a high school student who likes programming, video games, movies, and books. I'm also the Co-Founder and CEO of Too Much Daylight Studios, as well as the founder of FOSSphorous Studios. I'm an ENTJ according to the Myers-Briggs personality type test, and etc etc etc.
 			</p>
+			<a href="#software"><span class="glyphicon glyphicon-chevron-down"></span></a>
 		</div>
-		<div id="gfxdesign" class="sizeus container">
-			<h1>Graphic Design</h1>
-			<p>
-				Flash, Illustrator, Photoshop, After Effects. Make some pretty projects to display. Oh don't forget blender!
-			</p>
+	</div>
+	<div id="software" class="sizeus container">
+		<h1>Programming</h1>
+		<div class="col-md-6 col-sm-6 col-xs-6">
+				<h2>Languages (<span class="glyphicon glyphicon-star"></span> = Level of Mastery)</h2>
+				<table class="table borderless">
+					<tr>
+						<td>HTML &amp; CSS</td>
+						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
+					</tr>
+					<tr>
+						<td>Javascript</td>
+						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
+					</tr>
+					<tr>
+						<td>Lua</td>
+						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
+					</tr>
+					<tr>
+						<td>Ruby</td>
+						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
+					</tr>
+					<tr>
+						<td>Objective C</td>
+						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
+					</tr>
+					<tr>
+						<td>Python</td>
+						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
+					</tr>
+				</table>
+			</ul>
 		</div>
-		<div id="footer">
-			<h1>Contact Me</h1>
-			<p>
-				ROODAY, SOOPEROODAY, ROODAY logo created by Rudhra Raveendran &copy 2014<br/>
-				<a href="http://too-much-daylight.github.io/">Too Much Daylight</a> | <a href="http://fossphorous.github.io/">FOSSphorous</a><br/>
-				<span id="poweredby">Powered by stuff</span>
-			</p>
+		<div class="col-md-6 col-sm-6 col-xs-6">
+			<section>
+			  <h2>GitHub Repos</h2>
+			  <ul id="gh_repos">
+			    <li class="loading">Status updating...</li>
+			  </ul>
+			</section>
 		</div>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
-		<script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script type="text/javascript">
-		    $(document).ready(function(){
-		        if (!window.jXHR){
-		            var jxhr = document.createElement('script');
-		            jxhr.type = 'text/javascript';
-		            jxhr.src = 'js/vendor/jXHR.js';
-		            var s = document.getElementsByTagName('script')[0];
-		            s.parentNode.insertBefore(jxhr, s);
-		        }
-
-		        github.showRepos({
-		            user: 'ROODAY',
-		            count: 10,
-		            skip_forks: true,
-		            target: '#gh_repos'
-		        });
-		    });
-		  </script>
-		<script src="js/main.js"></script>
-    </body>
+	</div>
+	<div id="hardware" class="sizeus container">
+		<h1>Hardware</h1>
+		<p>
+			Display computer, computers that I've helped build, any Pi things done by then, hopefully Project Avis will be done by then.
+		</p>
+	</div>
+	<div id="gfxdesign" class="sizeus container">
+		<h1>Graphic Design</h1>
+		<p>
+			Flash, Illustrator, Photoshop, After Effects. Make some pretty projects to display. Oh don't forget blender!
+		</p>
+	</div>
+	<div id="footer">
+		<h1>Contact Me</h1>
+		<p>
+			ROODAY, SOOPEROODAY, ROODAY logo created by Rudhra Raveendran &copy; 2014<br/>
+			<a href="http://too-much-daylight.github.io/">Too Much Daylight</a> | <a href="http://fossphorous.github.io/">FOSSphorous</a><br/>
+			<span id="poweredby">Powered by stuff</span>
+		</p>
+	</div>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/production.js"></script>
+	<script type="text/javascript">document.write('<script src="//' + window.location.hostname + ':3001/livereload.js?snipver=1" type="text/javascript"><\/script>'); document.write('<script src="//' + window.location.hostname + ':8082/target/target-script-min.js#anonymous"><\/script>');</script>
+</body>
 </html>
