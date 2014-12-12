@@ -1,2 +1,16 @@
 @import 'bourbon/bourbon';
 @import 'variables';
+
+#loading {
+	text-align: center;
+    position: fixed;
+	width: 100%;
+    height: 100vh;
+	background-color: #FAFAFA;
+	z-index: 999; 
+	#container {
+		@include center; 
+        position: fixed;
+	}
+    overflow: hidden;
+}

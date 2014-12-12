@@ -2,6 +2,7 @@ $(window).load(function() {
 	setTimeout(function(){
 		$("#loading").fadeOut('slow');
 	}, 500);
+	$("#spacer").height($("#navbar").height());
 });
 
 $(document).ready(function(){
@@ -48,5 +49,5 @@ $(document).ready(function(){
 		});
 	});
 
-	
+
 });

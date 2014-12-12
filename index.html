@@ -38,8 +38,9 @@
 </head>
 <body>
 	<div id="loading">
-		<div>
+		<div id="container">
 			<h1>Loading</h1>
+			<paper-spinner active></paper-spinner>
 		</div>
   	</div>
   	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
@@ -53,7 +54,6 @@
 	      </button>
 	      <a class="navbar-brand" href="#">ROODAY</a>
 	    </div>
-
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
 	      	<li><a href="http://rooday.com/blog/">Blog</a></li>
@@ -87,64 +87,48 @@
 	    </div>
 	  </div>
 	</nav>
-	<div id="rooday" class="sizeus">
+	<div id="spacer"></div>
+	<div class="jumbtron">
 		<h1>ROODAY</h1>
-		<div class="container">
-			<h3>Rudhra Raveendran</h3>
-			<p id="about">
-				I'm a high school student who likes programming, video games, movies, and books. I'm also the Co-Founder and CEO of Too Much Daylight Studios, as well as the founder of FOSSphorous Studios. I'm an ENTJ according to the Myers-Briggs personality type test, and etc etc etc.
-			</p>
-			<a href="#software"><span class="glyphicon glyphicon-chevron-down"></span></a>
-		</div>
+		<h3>Rudhra Raveendran</h3>
+		<p id="about">
+			I'm a high school student who likes programming, video games, movies, and books. I'm also the Co-Founder and CEO of Too Much Daylight Studios, as well as the founder of FOSSphorous Studios. I'm an ENTJ according to the Myers-Briggs personality type test, and etc etc etc.
+		</p>
+		<a href="#software"><span class="glyphicon glyphicon-chevron-down"></span></a>
 	</div>
-	<div id="software" class="sizeus container">
+	<div id="software" class=" container">
 		<h1>Programming</h1>
 		<div class="col-md-6 col-sm-6 col-xs-6">
-				<h2>Languages (<span class="glyphicon glyphicon-star"></span> = Level of Mastery)</h2>
-				<table class="table borderless">
-					<tr>
-						<td>HTML &amp; CSS</td>
-						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-					</tr>
-					<tr>
-						<td>Javascript</td>
-						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-					</tr>
-					<tr>
-						<td>Lua</td>
-						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-					</tr>
-					<tr>
-						<td>Ruby</td>
-						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-					</tr>
-					<tr>
-						<td>Objective C</td>
-						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-					</tr>
-					<tr>
-						<td>Python</td>
-						<td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
-					</tr>
-				</table>
-			</ul>
+				<h2>Languages/Technologies I've Used</h2>
+				<ul>
+					<li>HTML5 &amp; CSS3</li>
+					<li>Javascript/jQuery</li>
+					<li>Python</li>
+					<li>Ruby</li>
+					<li>Java</li>
+					<li>Objective-C</li>
+					<li>Node.js</li>
+					<li>Socket.io</li>
+					<li>Polymer</li>
+				</ul>
 		</div>
 		<div class="col-md-6 col-sm-6 col-xs-6">
 			<section>
 			  <h2>GitHub Repos</h2>
 			  <ul id="gh_repos">
 			    <li class="loading">Status updating...</li>
+			    <paper-spinner active></paper-spinner>
 			  </ul>
 			</section>
 		</div>
 	</div>
-	<div id="hardware" class="sizeus container">
+	<div id="hardware" class=" container">
 		<h1>Hardware</h1>
 		<p>
 			Display computer, computers that I've helped build, any Pi things done by then, hopefully Project Avis will be done by then.
 		</p>
 	</div>
-	<div id="gfxdesign" class="sizeus container">
+	<div id="gfxdesign" class=" container">
 		<h1>Graphic Design</h1>
 		<p>
 			Flash, Illustrator, Photoshop, After Effects. Make some pretty projects to display. Oh don't forget blender!
@@ -161,6 +145,5 @@
 	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/production.js"></script>
-	<script type="text/javascript">document.write('<script src="//' + window.location.hostname + ':3001/livereload.js?snipver=1" type="text/javascript"><\/script>'); document.write('<script src="//' + window.location.hostname + ':8082/target/target-script-min.js#anonymous"><\/script>');</script>
 </body>
 </html>

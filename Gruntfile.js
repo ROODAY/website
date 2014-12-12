@@ -30,10 +30,7 @@ module.exports = function(grunt) {
 		watch: {
 			all: {
 				files: ['js/main.js','scss/*.scss'],
-				tasks: ['sass', 'concat', 'uglify'],
-				options: {
-					livereload: 3001
-				}
+				tasks: ['sass', 'concat', 'uglify']
 			}
 		},
 		nodemon: {
