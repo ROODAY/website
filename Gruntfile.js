@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 				separator: ';',
 			},
 			dist: {
-				src: ['js/vendor/jquery.js', 'js/vendor/jxhr.js', 'js/vendor/ripples.js', 'js/vendor/material.js', 'js/plugins.js', 'js/main.js'],
+				src: ['js/vendor/jxhr.js', 'js/vendor/ripples.js', 'js/vendor/material.js', 'js/plugins.js', 'js/main.js'],
 				dest: 'js/production.js'
 			}
 		}
