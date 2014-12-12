@@ -10,7 +10,6 @@ module.exports = function(grunt) {
 				files: {
 					'css/main.css': 'scss/main.scss',
 					'css/critical.css': 'scss/critical.scss',
-					'css/normalize.css': 'scss/normalize.scss',
 					'css/material.css': 'scss/material.scss'
 				}
 			}
