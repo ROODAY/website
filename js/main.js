@@ -18,13 +18,17 @@ $(window).load(function() {
 		"background-color": "#FFF"
 		
 	});
+	$("#loading-purple2").css({
+		"top": "0",
+		"z-index": "99999"
+	});
 	setTimeout(function(){
+		$("#circle-container").css("z-index", "9999");
 		$("#loading-purple2").css({
-			"top": "0",
 			"width": "100vw",
 			"border-radius": "0",
-			"height": (2 * $("#navbar").height()),
-			"z-index": "99999"
+			"height": (2 * $("#navbar").height())
+			
 		});
 		$("#grower").css({
 			"border-radius": "0",
