@@ -39,7 +39,10 @@ $(window).load(function() {
 			$("#loading-container").css("opacity", "0");
 			setTimeout(function(){
 				$("#loading-container").css("display", "none");
-				$(".jumbotron *").css("box-shadow", "0px 0px 0px rgba(0,0,0,0.23)");
+				$(".jumbotron *").css({
+					"box-shadow": "0px 0px 0px rgba(0,0,0,0.23)",
+					"opacity": "1"
+				});
 			}, 1000);
 		}, 1000);
 	}, 1000);
