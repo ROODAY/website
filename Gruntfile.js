@@ -76,4 +76,5 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['concurrent']);
 	grunt.registerTask('inline', ['inline']);
+	grunt.registerTask('compile', ['sass', 'concat', 'uglify']);
 }
