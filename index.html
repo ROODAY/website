@@ -36,13 +36,18 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div id="loading">
-		<div id="container">
-			<h1>Loading</h1>
-			<paper-spinner active></paper-spinner>
+	<div id="loading-container">
+		<div id="circle-container">
+			<div class="loading-circle" id="loading-green"></div>
+			<div class="loading-circle" id="loading-blue"></div>
+			<div class="loading-circle" id="loading-purple"></div>
+			<div class="loading-circle" id="loading-red"></div>
+			<div class="loading-circle" id="loading-yellow"></div>
 		</div>
-  	</div>
-  	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+		<div class="loading-circle" id="loading-purple2"></div>
+		<div class="loading-circle" id="grower"></div>
+	</div>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -76,14 +81,16 @@
 	    </div>
 	  </div>
 	</nav>
-	<div id="spacer"></div>
 	<main>
+		<div id="spacer"></div>
 		<div class="jumbotron" id="top">
 			<h1 id="headline">ROODAY</h1>
-			<p id="about" class="container">
+			<div id="about" class="container">
 				<h2>Rudhra Raveendran</h2>
-				I'm a high school student who likes programming, video games, movies, and books. I'm also the Co-Founder and CEO of Too Much Daylight Studios, as well as the founder of FOSSphorous Studios. I'm an ENTJ according to the Myers-Briggs personality type test, and etc etc etc.
-			</p>
+				<p>
+					I'm a high school student who likes programming, video games, movies, and books. I'm also the Co-Founder and CEO of Too Much Daylight Studios, as well as the founder of FOSSphorous Studios. I'm an ENTJ according to the Myers-Briggs personality type test, and etc etc etc.
+				</p>
+			</div>
 			<a href="#projects"><core-icon icon="expand-more"></core-icon></a>
 		</div>
 		<div id="projects" class="resize container">

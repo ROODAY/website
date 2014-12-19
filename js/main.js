@@ -1,9 +1,43 @@
 $(window).load(function() {
-	setTimeout(function(){
-		$("#loading").fadeOut('slow');
-	}, 500);
 	$("#spacer").height($("#navbar").height());
 	$("#top").height($(window).height - $("#navbar").height());
+	$("#loading-blue").css({
+		"margin-left": "-54px",
+		"background-color": "#FFF"
+	});
+	$("#loading-purple").css({
+		"margin-left": "-53px",
+		"background-color": "#FFF"
+	});
+	$("#loading-red").css({
+		"margin-left": "-52px",
+		"background-color": "#FFF"
+	});
+	$("#loading-yellow").css({
+		"margin-left": "-51px",
+		"background-color": "#FFF"
+		
+	});
+	setTimeout(function(){
+		$("#loading-purple2").css({
+			"top": "0",
+			"width": "100vw",
+			"border-radius": "0",
+			"height": (2 * $("#navbar").height()),
+			"z-index": "99999"
+		});
+		$("#grower").css({
+			"border-radius": "0",
+			"width": "100vw",
+			"height": "100vh"
+		});
+		setTimeout(function(){
+			$("#loading-container").css("opacity", "0");
+			setTimeout(function(){
+				$("#loading-container").css("display", "none");
+			}, 1000);
+		}, 1000);
+	}, 1000);
 });
 
 $(document).ready(function(){
