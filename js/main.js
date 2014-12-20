@@ -57,7 +57,7 @@ $(document).ready(function(){
     github.showRepos({
         user: 'ROODAY',
         count: 10,
-        skip_forks: true,
+        skip_forks: false,
         target: '#gh_repos'
     });
 	var listener = new window.keypress.Listener();
