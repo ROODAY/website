@@ -126,7 +126,8 @@ html,body {
 	}
 }
 
-.jumbotron > * {
+.jumbotron > * { 
 	@include transition(all 1s ease);
+	opacity: 0.0; 
 	box-shadow: 0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16);
 }
