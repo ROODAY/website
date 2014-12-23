@@ -77,6 +77,15 @@ $(document).ready(function(){
 	      document.body.appendChild(s);
 	    } void(0);
 	}, true);
+	listener.sequence_combo("d o g e", function() {
+		$("#meme").css("margin-top", "-1vh");
+	}, true);
+
+	$('#contactform').submit(function () {
+		sendemail();
+		return false;
+	});
+
 	$(function() {
 		$('a[href*=#]:not([href=#])').click(function() {
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -91,12 +100,10 @@ $(document).ready(function(){
 			}
 		});
 	});
-
 	$(window).scroll(function() {
 	    if ($(window).scrollTop() > $(window).height()) {
 	        $(".navbar-brand").css("opacity", "1.0");
-	    }
-	    else {
+	    } else {
 	        $(".navbar-brand").css("opacity", "0.0");
 	    }
 	});
@@ -105,3 +112,11 @@ $(document).ready(function(){
 		$("#top").height($(window).height - $("#navbar").height());
 	});
 });
+
+function sendemail() {
+	var subject = $("#messagesubject").val();
+	var body = $("#messagebody").val();
+	document.location.href = "mailto:rudytheninja@gmail.com?subject="
+		+ encodeURIComponent(subject)
+		+ "&body=" + encodeURIComponent(body);
+}

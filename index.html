@@ -29,6 +29,7 @@
 	<link rel="import" href="bower_components/core-elements/core-elements.html">
 	<link rel="import" href="bower_components/core-icons/core-icons.html">
 	<link rel="import" href="bower_components/paper-elements/paper-elements.html">
+	<link rel="import" href="bower_components/x-meme/x-meme.html">
 
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/material.css">
@@ -62,8 +63,7 @@
 	      <ul class="nav navbar-nav navbar-right">
 	      	<li><a href="http://rooday.com/blog/">Blog</a></li>
 	      	<li><a href="#projects">Projects</a></li>
-	      	<li><a href="#contact">Contact Me</a></li>
-			<li><a href="">Resume</a></li>
+			<li><a href="resume.html">Resume</a></li>
 	      </ul>
 	    </div>
 	  </div>
@@ -78,10 +78,10 @@
 					I'm a high school student who likes programming, video games, movies, and books. I'm also the Co-Founder and CEO of Too Much Daylight Studios, as well as the founder of FOSSphorous Studios. I'm an ENTJ according to the Myers-Briggs personality type test, and etc etc etc.
 				</p>
 			</div>
-			<a href="#projects"><core-icon icon="expand-more"></core-icon></a>
+			<x-meme id="meme" type="doge" top="such webcomponent" bottom="much sexy"></x-meme>
 		</div>
 		<div id="projects" class="resize container">
-			<h1>Programming</h1>
+			<h1>Projects</h1>
 			<div class="col-md-6">
 					<h2>Languages/Technologies I've Used</h2>
 					<ul>
@@ -106,16 +106,13 @@
 				</section>
 			</div>
 		</div>
-		<div id="contact" class="resize container">
-			<h1>Contact Me</h1>
-		</div>
 	</main>
 	<footer>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-4">
 					<h2>Find me elsewhere:</h2>
-					<ul>
+					<ul id="sociallinks">
 						<li><a id="facebooklink" href="https://www.facebook.com/sooperooday">Facebook</a></li>
 						<li><a id="twitterlink" href="https://twitter.com/rudytheninja">Twitter</a></li>
 						<li><a id="googlelink" href="https://plus.google.com/u/0/+RudyRaveendran/posts">Google+</a></li>
@@ -124,8 +121,26 @@
 						<li><a id="linkedinlink" href="http://www.linkedin.com/in/rooday">LinkedIn</a></li>
 					</ul>
 				</div>
+				<div class="col-md-8">
+					<h2>Contact Me</h2>
+
+					<form onsubmit="sendemail()" class="form-horizontal" id="contactform">
+					    <fieldset>
+					        <div class="form-group container">
+					            <div class="col-lg-10">
+					            	<input class="form-control floating-label" id="messagesubject" type="text" placeholder="Subject" id="subject"><br>
+					                <textarea class="form-control floating-label" rows="3" id="messagebody" placeholder="Tell me something!"></textarea>
+					            <div class="col-lg-10 col-lg-offset-2">
+					                <button type="submit" class="btn btn-primary" data-content="Opening your mail client..." data-toggle="snackbar" id="sendmessage">Send</button>
+					            </div>
+					        </div>
+					    </fieldset>
+					</form>
+				</div>
 			</div>
-			<div id="copyright">
+		</div>
+		<div id="copyright" class="clearfix hidden-xs">
+			<div>
 				<span class="pull-left">ROODAY, SOOPEROODAY, ROODAY logo created by Rudhra Raveendran &copy; 2014</span>
 				<span id="poweredby" class="pull-right">Powered by stuff</span>
 			</div>

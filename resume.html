@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ROODAY</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="assets/favicons/favicon-144.png">
+	<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+	<link rel="shortcut icon" href="assets/favicons/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="assets/favicons/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="assets/favicons/favicon-196.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="assets/favicons/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="assets/favicons/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/favicon-72.png">
+	<link rel="apple-touch-icon" href="assets/favicons/favicon-57.png">
+
+	<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+	<link rel="import" href="bower_components/polymer/polymer.html">
+	<link rel="import" href="bower_components/core-elements/core-elements.html">
+	<link rel="import" href="bower_components/core-icons/core-icons.html">
+	<link rel="import" href="bower_components/paper-elements/paper-elements.html">
+	<link rel="import" href="bower_components/x-meme/x-meme.html">
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/material.css">
+	<link rel="stylesheet" href="css/critical.css?__inline=true">
+	<link rel="stylesheet" href="css/main.css">
+	<style>
+		#goback {
+			background-color: #673AB7;
+			color: white;
+		}
+
+		#goback:hover > #arrow {
+			-webkit-transition: -webkit-transform .25s ease-in;
+			-moz-transition: -moz-transform .25s ease-in;
+			-o-transition: -o-transform .25s ease-in;
+			transition: transform .25s ease-in;
+		    -webkit-transform: rotate(360deg);
+		    -moz-transform: rotate(360deg);
+		    -o-transform: rotate(360deg);
+		    transform: rotate(360deg);
+		}
+	</style>
+</head>
+<body>
+	<div id="loading-container">
+		<div id="circle-container">
+			<div class="loading-circle animated pulse" id="loading-green"></div>
+			<div class="loading-circle animated pulse" id="loading-blue"></div>
+			<div class="loading-circle animated pulse" id="loading-purple"></div>
+			<div class="loading-circle animated pulse" id="loading-red"></div>
+			<div class="loading-circle animated pulse" id="loading-yellow"></div>
+		</div>
+		<div class="loading-circle" id="loading-purple2"></div>
+		<div class="loading-circle" id="grower"></div>
+	</div>
+	<div class="jumbotron" id="top" style="margin-bottom: 0;">
+		<h1 id="headline">Silly you, this isn't ready yet</h1>
+		<x-meme type="yuno" top="why you no have resume yet?"></x-meme>
+		<paper-button id="goback" class="pagination-centered">
+			<core-icon icon="arrow-back" id="arrow"></core-icon>
+			Go Back
+		</paper-button>
+	</div>
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/production.js"></script>
+    <script>
+	  jQuery("#headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '140px' });
+
+	  $(document).ready(function(){
+	  	$("#goback").click(function(){
+	  		document.location.href = "/";
+	  	});
+	  });
+	</script>
+</body>
+</html>
