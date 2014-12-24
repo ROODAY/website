@@ -104,8 +104,15 @@ $(document).ready(function(){
 	$(window).scroll(function() {
 	    if ($(window).scrollTop() > $(window).height()) {
 	        $(".navbar-brand").css("opacity", "1.0");
+	        $("#scrolldown").removeClass("bounce");
 	    } else {
 	        $(".navbar-brand").css("opacity", "0.0");
+	        $("#scrolldown").addClass("bounce");
+	    }
+	    if ($(window).scrollTop() > 30) {
+	        $("#scrolldown").css("opacity", "0.0");
+	    } else {
+	        $("#scrolldown").css("opacity", "1.0");
 	    }
 	});
 	$(window).resize(function() {

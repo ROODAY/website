@@ -2,6 +2,25 @@
 @import 'material-colors';
 @import 'variables';
 
+@-webkit-keyframes bounce {
+  0%       { bottom:5px; }
+  25%, 75% { bottom:18px; }
+  50%      { bottom:20px; }
+  100%     {bottom:5px;}
+}
+@-moz-keyframes bounce {
+  0%       { bottom:5px; }
+  25%, 75% { bottom:18px; }
+  50%      { bottom:20px; }
+  100%     {bottom:5px;}
+}
+@keyframes bounce {
+  0%       { bottom:5px; }
+  25%, 75% { bottom:18px; }
+  50%      { bottom:20px; }
+  100%     {bottom:5px;}
+}
+
 @font-face {
     font-family: 'icomoon';
     src:url('../fonts/icomoon.eot?ky3r9s');
@@ -148,11 +167,21 @@ footer {
     z-index: 1 !important;
     bottom: 5px;
     color: $grey-50;
-    width: 300px;
+    width: 200px;
     text-align: center;
     font-size: 1.25rem;
     right: 50%;
-    margin-right: -150px;
+    margin-right: -100px;
     opacity: 0.0;
     @include transition(opacity 1s ease);
+    
+    a {
+        color: $grey-50;
+    }
+}
+
+.bounce {
+    -webkit-animation: bounce 1s infinite;
+    -moz-animation: bounce 1s infinite;
+    animation: bounce 1s infinite;
 }
