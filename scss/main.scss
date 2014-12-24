@@ -93,3 +93,20 @@ footer {
     margin-top: -300vh;
     @include transition(margin-top 1s ease);
 }
+
+#projects, footer {
+    z-index: 10 !important;
+    position: relative !important;
+}
+
+#scrolldown {
+    position: fixed;
+    z-index: 1 !important;
+    bottom: 5px;
+    color: $grey-50;
+    width: 300px;
+    text-align: center;
+    font-size: 1.25rem;
+    right: 50%;
+    margin-right: -150px;
+}
