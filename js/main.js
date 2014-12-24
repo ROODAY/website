@@ -43,6 +43,7 @@ $(window).load(function() {
 					"box-shadow": "0px 0px 0px rgba(0,0,0,0.23)",
 					"opacity": "1"
 				});
+				$("#scrolldown").css("opacity", "1");
 			}, 1000);
 		}, 1000);
 	}, 1000);
