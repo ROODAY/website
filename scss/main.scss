@@ -185,3 +185,79 @@ footer {
     -moz-animation: bounce 1s infinite;
     animation: bounce 1s infinite;
 }
+
+.panel-primary>.panel-heading {
+    background-color: $deep-purple-500 !important;
+    border-color: $deep-purple-500 !important;
+}
+
+.panel-body {
+    color: $grey-50;
+}
+
+#schoolwork {
+    .panel-body {
+        background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.45), 
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("http://i.imgur.com/k8nFv7r.png");
+        background-size: cover;
+    }
+}
+#earthinvader {
+    .panel-body {
+        background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.45), 
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("http://i.imgur.com/uJwKakP.png");
+        background-size: cover;
+    }
+}
+#youphoria {
+    .panel-body {
+        background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.45), 
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("http://i.imgur.com/36v6edb.png");
+        background-size: cover;
+    }
+}
+#showerify {
+    .panel-body {
+        background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.45), 
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("http://i.imgur.com/r1VYaHS.png");
+        background-size: cover;
+    }
+}
+#animatrix {
+    .panel-body {
+        background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.45), 
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("http://i.imgur.com/gqhBTbc.png");
+        background-size: cover;
+    }
+}
+#ballsim {
+    .panel-body {
+        background: 
+            linear-gradient(
+          rgba(0, 0, 0, 0.45), 
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("http://i.imgur.com/E0jMht4.png");
+        background-size: cover;
+    }
+}
