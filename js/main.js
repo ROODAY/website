@@ -64,6 +64,12 @@ $(document).ready(function(){
         skip_forks: false,
         target: '#gh_repos'
     });
+    var navbarheight = $("#navbar").height();
+    $('.nav a').on('click', function(){
+    	if ($(window).width() <= 767) {
+    		$(".navbar-toggle").click();
+    	}
+	});
 	var listener = new window.keypress.Listener();
 	listener.sequence_combo("up up down down left right left right b a enter", function() {
 	    var s = document.createElement('script');
@@ -94,7 +100,7 @@ $(document).ready(function(){
 				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 				if (target.length) {
 					$('html,body').animate({
-					scrollTop: target.offset().top - $("#navbar").height()
+					scrollTop: target.offset().top - navbarheight
 					}, 1000);
 					return false;
 				}
