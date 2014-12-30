@@ -64,6 +64,7 @@ $(document).ready(function(){
         skip_forks: false,
         target: '#gh_repos'
     });
+    $("#copyrightyear").html(new Date().getFullYear());
     var navbarheight = $("#navbar").height();
     $('.nav a').on('click', function(){
     	if ($(window).width() <= 767) {

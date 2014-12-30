@@ -42,7 +42,7 @@
 </head>
 <body>
 	<div id="loading-container">
-		<div id="circle-container">
+		<div id="circle-container" class="hidden-xs">
 			<div class="loading-circle animated pulse" id="loading-green"></div>
 			<div class="loading-circle animated pulse" id="loading-blue"></div>
 			<div class="loading-circle animated pulse" id="loading-purple"></div>
@@ -74,7 +74,7 @@
 	</nav>
 	<main>
 		<div id="spacer"></div>
-		<div id="scrolldown" class="bounce">
+		<div id="scrolldown" class="bounce hidden-xs">
 			<a href="#projects">This way!</a>
 		</div>
 		<div class="jumbotron" id="top">
@@ -85,12 +85,12 @@
 					I'm a high school student who likes programming, video games, movies, and books. Particularly the first two. Seeing as you're already here, you might as well scroll down and see the magic.
 				</p>
 			</div>
-			<x-meme id="meme" type="doge" top="such webcomponent" bottom="much sexy"></x-meme>
+			<x-meme id="meme" type="doge" top="such webcomponent" bottom="much sexy" class="hidden-xs hidden-sm"></x-meme>
 		</div>
 		<div id="projects" class="resize container">
 			<div class="row">
 				<div class="col-md-6">
-						<h2>Languages/Technologies I've Used</h2>
+						<h2>Languages &amp; Technologies I've Used</h2>
 						<ul>
 							<li>HTML5 &amp; CSS3</li>
 							<li>Javascript/jQuery</li>
@@ -232,7 +232,7 @@
 		</div>
 		<div id="copyright" class="clearfix">
 			<div>
-				<span class="pull-left">Rudhra Raveendran &copy; 2014</span>
+				<span class="pull-left">Rudhra Raveendran &copy; <span id="copyrightyear">2014</span></span>
 				<span id="poweredby" class="pull-right">
 					Powered by 
 					<span class="icon-html5"></span>
