@@ -33,14 +33,11 @@
 
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/material.css">
-	<style>
-.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}.animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}@-webkit-keyframes pulse{0%{-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)}50%{-webkit-transform:scale3d(1.1, 1.1, 1.1);transform:scale3d(1.1, 1.1, 1.1)}100%{-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)}}@keyframes pulse{0%{-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)}50%{-webkit-transform:scale3d(1.1, 1.1, 1.1);transform:scale3d(1.1, 1.1, 1.1)}100%{-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)}}.pulse{-webkit-animation-name:pulse;animation-name:pulse}html,body{font-size:1rem;overflow-x:hidden}.loading-circle{width:50px;height:50px;border-radius:100%;display:inline-block;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease}#loading-green{background-color:#4CAF50;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite}#loading-blue{background-color:#3F51B5;-webkit-animation-delay:1s;-webkit-animation-iteration-count:infinite;-moz-animation-delay:1s;-moz-animation-iteration-count:infinite}#loading-purple{background-color:#673AB7;-webkit-animation-delay:2s;-webkit-animation-iteration-count:infinite;-moz-animation-delay:2s;-moz-animation-iteration-count:infinite}#loading-purple2{background-color:#673AB7;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}#loading-red{background-color:#F44336;-webkit-animation-delay:3s;-webkit-animation-iteration-count:infinite;-moz-animation-delay:3s;-moz-animation-iteration-count:infinite}#loading-yellow{background-color:#FFEB3B;-webkit-animation-delay:4s;-webkit-animation-iteration-count:infinite;-moz-animation-delay:4s;-moz-animation-iteration-count:infinite}#grower{background-color:#FFF;z-index:99998;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}#loading-container{z-index:9999;position:fixed;background-color:#EEEEEE;width:100vw;height:100vh;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease}#loading-container #circle-container{z-index:99999;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%);-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease}.jumbotron>*{-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;opacity:0.0;box-shadow:0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16)}
-/*# sourceMappingURL=critical.css.map */
-
-</style>
+	<link rel="stylesheet" href="css/critical.css?__inline=true">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<div class="panel panel-default" id="transition"></div>
 	<div id="loading-container">
 		<div id="circle-container" class="hidden-xs">
 			<div class="loading-circle animated pulse" id="loading-green"></div>
@@ -73,7 +70,6 @@
 	  </div>
 	</nav>
 	<main>
-		<div id="spacer"></div>
 		<div id="scrolldown" class="bounce hidden-xs">
 			<a href="#projects">This way!</a>
 		</div>
@@ -120,7 +116,7 @@
 					    <div class="panel-heading">
 					        <h3 class="panel-title">Schoolwork Repository</h3>
 					    </div>
-					    <div class="panel-body">
+					    <div href="http://rooday.com/schoolwork/" class="panel-body schoolworklink" data-link="schoolwork" data-color="#5264ae">
 					        A collection of miscellaneous school work.
 					    </div>
 					    <div class="panel-footer">
@@ -133,9 +129,9 @@
 					    <div class="panel-heading">
 					        <h3 class="panel-title">Earth Invader</h3>
 					    </div>
-					    <div class="panel-body">
+					    <a href="http://wwpol.github.io/Earth-Invader/" target="_blank" class="panel-body">
 					        WWPOL entry for JS13k game competition.
-					    </div>
+					    </a>
 					    <div class="panel-footer">
 					    	<a href="https://github.com/WWPOL/Earth-Invader" target="_blank"><span class="icon-github"></span></a>
 					    </div>
@@ -146,9 +142,9 @@
 					    <div class="panel-heading">
 					        <h3 class="panel-title">Youphoria</h3>
 					    </div>
-					    <div class="panel-body">
+					    <a href="https://youphoria.herokuapp.com/" target="_blank" class="panel-body">
 					        A Pandora-like service for continuous streaming of YouTube videos.
-					    </div>
+					    </a>
 					    <div class="panel-footer">
 					    	<a href="https://github.com/ROODAY/Youphoria" target="_blank"><span class="icon-github"></span></a>
 					    </div>
@@ -161,9 +157,9 @@
 					    <div class="panel-heading">
 					        <h3 class="panel-title">Showerify</h3>
 					    </div>
-					    <div class="panel-body">
+					    <a href="https://showerify.herokuapp.com/" target="_blank" class="panel-body">
 					        Voice-controlled spotify music while you shower.
-					    </div>
+					    </a>
 					    <div class="panel-footer">
 					    	<a href="https://github.com/ROODAY/showerify" target="_blank"><span class="icon-github"></span></a>
 					    </div>
@@ -174,9 +170,9 @@
 					    <div class="panel-heading">
 					        <h3 class="panel-title">AniMatrix</h3>
 					    </div>
-					    <div class="panel-body">
+					    <a href="http://rooday.com/AniMatrix/" target="_blank" class="panel-body">
 					        Simple matrix based animations, made for Algebra II.
-					    </div>
+					    </a>
 					    <div class="panel-footer">
 					    	<a href="https://github.com/ROODAY/AniMatrix" target="_blank"><span class="icon-github"></span></a>
 					    </div>
@@ -187,9 +183,9 @@
 					    <div class="panel-heading">
 					        <h3 class="panel-title">Ball Simulator 2015</h3>
 					    </div>
-					    <div class="panel-body">
+					    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
 					        A Javascript implementation of the classic ball game in canvas.
-					    </div>
+					    </a>
 					    <div class="panel-footer">
 					    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
 					    </div>
@@ -232,7 +228,7 @@
 		</div>
 		<div id="copyright" class="clearfix">
 			<div>
-				<span class="pull-left">Rudhra Raveendran &copy; <span id="copyrightyear">2014</span></span>
+				<span class="pull-left">Rudhra Raveendran &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script></span>
 				<span id="poweredby" class="pull-right">
 					Powered by 
 					<span class="icon-html5"></span>

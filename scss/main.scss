@@ -71,7 +71,8 @@ a {
 }
 
 .navbar {
-    background-color: $deep-purple-500 !important;
+    background: rgba(0,0,0,0.0);
+    @include transition(background 0.5s ease);
 }
 
 .jumbotron {
@@ -149,6 +150,29 @@ footer {
     }
 }
 
+a.panel-body {
+    display: block;
+    
+    &:hover, &:focus {
+        color: $grey-50;
+    }
+}
+
+.schoolworklink {
+    cursor: pointer;
+}
+
+#transition {
+    margin-top: -100vh;
+   -webkit-transition: background-color 1s ease, margin-top 1s ease;
+    -moz-transition: background-color 1s ease, margin-top 1s ease;
+    transition: background-color 1s ease, margin-top 1s ease;
+    height: 100vh;
+    width: 100vw; 
+    position: fixed;
+    z-index: 999999;
+    background-color: $deep-purple-500;
+}
 
 #meme {
     z-index: 99999;

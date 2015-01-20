@@ -1,5 +1,5 @@
 $(window).load(function() {
-	$("#spacer").height($("#navbar").height());
+	//$("#spacer").height($("#navbar").height());
 	$("#top").height($(window).height - $("#navbar").height());
 	$("#loading-blue").css({
 		"margin-left": "-54px",
@@ -93,6 +93,18 @@ $(document).ready(function(){
 		sendemail();
 		return false;
 	});
+	$(".schoolworklink").click(function(){
+        var link = $(this).data("link");
+        var color = $(this).data("color");
+        var url = window.location.href + link;
+        $("#transition").css({
+            "margin-top": "0",
+            "background": color
+        });
+        setTimeout(function(){
+            window.location.href = link;
+        }, 1000);
+    });
 
 	$(function() {
 		$('a[href*=#]:not([href=#])').click(function() {
@@ -110,11 +122,16 @@ $(document).ready(function(){
 	});
 	$(window).scroll(function() {
 	    if ($(window).scrollTop() > $(window).height()) {
-	        $(".navbar-brand").css("opacity", "1.0");
 	        $("#scrolldown").removeClass("bounce");
 	    } else {
-	        $(".navbar-brand").css("opacity", "0.0");
 	        $("#scrolldown").addClass("bounce");
+	    }
+	    if ($(window).scrollTop() > ($(window).height() - navbarheight)) {
+	    	$(".navbar-brand").css("opacity", "1.0");
+	        $(".navbar").css("background", "#673AB7");
+	    } else {
+	    	$(".navbar-brand").css("opacity", "0.0");
+	        $(".navbar").css("background", "rgba(0,0,0,0.0)");
 	    }
 	    if ($(window).scrollTop() > 30) {
 	        $("#scrolldown").css("opacity", "0.0");
