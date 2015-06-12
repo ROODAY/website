@@ -88,6 +88,16 @@ $(document).ready(function(){
 	listener.sequence_combo("d o g e", function() {
 		$("#meme").css("margin-top", "-1vh");
 	}, true);
+	listener.sequence_combo("n i c e", function() {
+        var url = window.location.href + "nice";
+        $("#transition").css({
+            "margin-top": "0",
+            "background": "#fff"
+        });
+        setTimeout(function(){
+            window.location.href = url;
+        }, 1000);
+	}, true);
 
 	$('#contactform').submit(function () {
 		sendemail();
@@ -96,7 +106,6 @@ $(document).ready(function(){
 	$(".schoolworklink").click(function(){
         var link = $(this).data("link");
         var color = $(this).data("color");
-        var url = window.location.href + link;
         $("#transition").css({
             "margin-top": "0",
             "background": color
