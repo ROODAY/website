@@ -1,4 +1,4 @@
-@import 'bourbon/bourbon';
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import 'variables';
 
 .animated {
@@ -132,3 +132,7 @@ html,body {
 	opacity: 0.0; 
 	box-shadow: 0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16);
 }
+
+#jumbotron-content {
+	@include center("both")
+} 

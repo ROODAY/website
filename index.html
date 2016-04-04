@@ -39,6 +39,7 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<x-meme id="meme" type="doge" top="such webcomponent" bottom="much sexy" class="hidden-xs hidden-sm"></x-meme>
 	<div class="panel panel-default" id="transition"></div>
 	<div id="loading-container">
 		<div id="circle-container" class="hidden-xs">
@@ -60,57 +61,33 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#top">ROODAY</a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
-	      	<li><a href="http://rooday.com/blog/" target="_blank">Blog</a></li>
+	      	<li><a href="#top" target="_blank">Home</a></li>
 	      	<li><a href="#projects">Projects</a></li>
+	      	<li><a href="http://rooday.com/blog/" target="_blank">Blog</a></li>
 			<li><a href="resume.pdf" target="_blank">Resume</a></li>
 	      </ul>
 	    </div>
 	  </div>
 	</nav>
 	<main>
-		<div id="scrolldown" class="bounce hidden-xs">
-			<a href="#projects">This way!</a>
+		<div id="scrolldown" class="hidden-xs">
+			<a href="#projects"><core-icon icon="expand-more"></core-icon> </a>
 		</div>
 		<div class="jumbotron" id="top">
-			<h1 id="headline">ROODAY</h1>
-			<div id="about" class="container">
-				<h2>Rudhra Raveendran</h2>
-				<p>
-					I'm a student that loves programming and games, and have been doing both for quite some time now. Although I'm younger than most developers, I strive to learn as much as possible to keep up with today's rapidly evolving technology. Take a look at what I've done so far!
-				</p>
+			<div id="jumbotron-content">
+				<h1 id="headline">ROODAY</h1>
+				<div id="about" class="container">
+					<h2>Rudhra Raveendran</h2>
+					<p>
+						I'm a student that loves programming and games, and have been doing both for quite some time now. Although I'm younger than most developers, I strive to learn as much as possible to keep up with today's rapidly evolving technology. Take a look at what I've done so far!
+					</p>
+				</div>
 			</div>
-			<x-meme id="meme" type="doge" top="such webcomponent" bottom="much sexy" class="hidden-xs hidden-sm"></x-meme>
 		</div>
 		<div id="projects" class="resize container">
-			<div class="row">
-				<div class="col-md-6">
-						<h2>Languages &amp; Technologies I've Used</h2>
-						<ul>
-							<li>HTML5 &amp; CSS3</li>
-							<li>Javascript/jQuery</li>
-							<li>Python</li>
-							<li>Ruby</li>
-							<li>Java</li>
-							<li>Objective-C</li>
-							<li>Node.js</li>
-							<li>Socket.io</li>
-							<li>Polymer</li>
-						</ul>
-				</div>
-				<div class="col-md-6">
-					<section>
-					  <h2>Recent Work</h2>
-					  <ul id="gh_repos">
-					    <li class="loading">Status updating...</li>
-					    <paper-spinner active></paper-spinner>
-					  </ul>
-					</section>
-				</div>
-			</div>
 			<h1>Projects</h1>
 			<div class="row">
 				<div class="col-md-4">
@@ -194,13 +171,39 @@
 					</div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-md-6">
+						<h2>Languages &amp; Technologies I've Used</h2>
+						<ul>
+							<li>HTML5 &amp; CSS3</li>
+							<li>Javascript/jQuery</li>
+							<li>Python</li>
+							<li>Ruby</li>
+							<li>Java</li>
+							<li>Objective-C</li>
+							<li>Node.js</li>
+							<li>Socket.io</li>
+							<li>Polymer</li>
+						</ul>
+				</div>
+				<div class="col-md-6">
+					<section>
+					  <h2>Recent Work</h2>
+					  <ul id="gh_repos">
+					    <li class="loading">Status updating...</li>
+					    <paper-spinner active></paper-spinner>
+					  </ul>
+					</section>
+				</div>
+			</div>
+			
 		</div>
 	</main>
 	<footer>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-4">
-					<h2>Find me elsewhere:</h2>
+					<h2>Find me elsewhere</h2>
 					<ul id="sociallinks">
 						<li><a id="facebooklink" href="https://www.facebook.com/sooperooday" target="_blank">Facebook</a></li>
 						<li><a id="twitterlink" href="https://twitter.com/rudytheninja" target="_blank">Twitter</a></li>
@@ -230,14 +233,7 @@
 		</div>
 		<div id="copyright" class="clearfix">
 			<div>
-				<span class="pull-left">Rudhra Raveendran &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script></span>
-				<span id="poweredby" class="pull-right">
-					Powered by 
-					<span class="icon-html5"></span>
-					<span class="icon-css3"></span>
-					<span class="icon-github"></span>
-					<core-icon icon="polymer"></core-icon> 
-				</span>
+				<span>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Rudhra Raveendran - All Rights Reserved</span>
 			</div>
 		</div>
 	</footer>
@@ -245,7 +241,7 @@
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/production.js"></script>
     <script>
-	  jQuery("#headline").fitText(1.2, { minFontSize: '20px', maxFontSize: '140px' });
+	  jQuery("#headline").fitText(.5);
 	</script>
 </body>
 </html>

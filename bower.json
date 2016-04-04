@@ -1,16 +1,10 @@
 {
-  "name": "roodaysite",
-  "version": "2.0.0",
+  "name": "rooday.com",
+  "version": "2.5.0",
+  "description": "Rudhra Raveendran's website.",
+  "keywords": ["programming", "website", "rooday", "rudhra", "raveendran"],
   "homepage": "http://rooday.com/",
-  "authors": [
-    "ROODAY <rudytheninja@gmail.com>"
-  ],
-  "description": "my website",
-  "main": "index.html",
-  "keywords": [
-    "programming",
-    "student"
-  ],
+  "author": "Rudhra Raveendran <rudytheninja@gmail.com> (http://rooday.com/)",
   "license": "MIT",
   "private": true,
   "ignore": [
