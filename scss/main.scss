@@ -83,6 +83,18 @@ a {
     opacity: 0.0;
     @include transition(opacity 0.5s ease);
     box-shadow: 0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16);
+    
+    li a {
+        color: $grey-50;
+        @include transition(text-shadow .5s ease);
+        text-decoration: none;
+    }
+
+    li a:hover {
+        text-decoration: none;
+        text-shadow: -6px 6px 0px rgba(0,0,0,0.2),
+                    0px 0px 6px rgba(255,255,255,0.7);
+    }
 }
 
 .jumbotron {
@@ -123,14 +135,15 @@ footer {
         list-style-type: none;
         
         li a {
-            color: $grey-50 !important;
-            @include transition(color .5s ease);
+            color: $grey-50;
+            @include transition(text-shadow .5s ease);
             text-decoration: none;
         }
 
         li a:hover {
             text-decoration: none;
-            color: $teal-500 !important;
+            text-shadow: -6px 6px 0px rgba(0,0,0,0.2),
+                        0px 0px 6px rgba(255,255,255,0.7);
         }
     } 
 

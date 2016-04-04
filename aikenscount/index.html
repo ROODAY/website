@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Current Aikens Count</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="wot-verification" content="5c9a378b6a3e06b680cd">
+		<meta name="theme-color" content="#673AB7">
+
+		<link rel="shortcut icon" href="../assets/favicons/favicon.ico">
+		<link rel="icon" sizes="16x16 32x32 64x64" href="../assets/favicons/favicon.ico">
+		<link rel="icon" type="image/png" sizes="196x196" href="../assets/favicons/favicon-192.png">
+		<link rel="icon" type="image/png" sizes="160x160" href="../assets/favicons/favicon-160.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96.png">
+		<link rel="icon" type="image/png" sizes="64x64" href="../assets/favicons/favicon-64.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16.png">
+		<link rel="apple-touch-icon" href="../assets/favicons/favicon-57.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/favicon-114.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/favicon-72.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/favicon-144.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/favicon-60.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/favicon-120.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/favicon-76.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/favicon-152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/favicon-180.png">
+		<meta name="msapplication-TileColor" content="#FFFFFF">
+		<meta name="msapplication-TileImage" content="../assets/favicons/favicon-144.png">
+		<meta name="msapplication-config" content="../assets/favicons/browserconfig.xml">
+
+		<style>*{margin:0;padding:0}body{-webkit-transition:background .5s ease;-moz-transition:background .5s ease;transition:background .5s ease;font-size:1rem;font-family:'Open Sans',sans-serif}#main{position:absolute;height:200px;width:600px;background-color:rgba(0,0,0,.5);text-align:center;color:#eee;margin:0 auto;border-radius:7px}#time{width:600px;height:75px;margin:0 auto 25px;padding-top:15px;text-align:center;font-size:4rem}#hex{width:600px;height:75px;margin:0 auto 50px;padding-top:15px;text-align:center;font-size:2.5rem}#title{width:600px;height:5.5rem;font-size:5rem;margin-top:25px;position:absolute;text-align:center;color:#eee;font-family:Comfortaa,sans-serif}</style>
+	</head>
+	<body>
+		<div id="title">
+			Aikens Count
+		</div>
+		<div id="main">
+			<div id="time">
+				34
+			</div>
+			<div id="hex">
+				<span id="hex1"></span><span id="hex2"></span><span id="hex3"></span>
+			</div>
+		</div>
+			
+		<script>
+			function center() {
+				var main = document.getElementById('main');
+	 			main.style['margin-top'] = (((document.documentElement.clientHeight) / 2) - (main.offsetHeight / 2)) + 'px';
+	 			main.style['margin-left'] = (((document.documentElement.clientWidth) / 2) - (main.offsetWidth / 2)) + 'px';
+	 			var title = document.getElementById("title");
+	 			title.style['margin-left'] = (((document.documentElement.clientWidth) / 2) - (title.offsetWidth / 2)) + 'px';
+			}
+			center();
+			window.addEventListener('resize', center);
+			var date = new Date;
+			var hex1 = document.getElementById("hex1");
+			var hex2 = document.getElementById("hex2");
+			var hex3 = document.getElementById("hex3");
+			hex1.innerHTML = ("0" + (Math.round(date.getHours() * 255 / 24)).toString(16)).toUpperCase().slice(-2);
+			hex2.innerHTML = ("0" + (Math.round(date.getMinutes() * 255 / 60)).toString(16)).toUpperCase().slice(-2);
+			hex3.innerHTML = ("0" + (Math.round(date.getSeconds() * 255 / 60)).toString(16)).toUpperCase().slice(-2)
+			var hex = hex1.innerHTML + hex2.innerHTML + hex3.innerHTML;
+			document.body.style.background = "#" + hex;
+			setInterval(function(){
+				var date = new Date;
+				hex1.innerHTML = ("0" + (Math.round(date.getHours() * 255 / 24)).toString(16)).toUpperCase().slice(-2);
+				hex2.innerHTML = ("0" + (Math.round(date.getMinutes() * 255 / 60)).toString(16)).toUpperCase().slice(-2);
+				hex3.innerHTML = ("0" + (Math.round(date.getSeconds() * 255 / 60)).toString(16)).toUpperCase().slice(-2);	
+				var hex = hex1.innerHTML + hex2.innerHTML + hex3.innerHTML;
+				document.body.style.background = "#" + hex;
+			}, 1000)
+		</script>
+	</body>
+</html>
