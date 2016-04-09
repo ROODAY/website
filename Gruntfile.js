@@ -10,7 +10,8 @@ module.exports = function(grunt) {
 				files: {
 					'css/main.css': 'scss/main.scss',
 					'css/critical.css': 'scss/critical.scss',
-					'css/material.css': 'scss/material.scss'
+					'css/material.css': 'scss/material.scss',
+					'css/bootstrap.css': 'scss/bootstrap.scss'
 				}
 			}
 		},
@@ -27,7 +28,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			all: {
-				files: ['js/main.js','scss/*.scss'],
+				files: ['js/main.js', 'js/plugins.js', 'scss/*.scss'],
 				tasks: ['sass', 'concat', 'uglify']
 			}
 		},
@@ -59,7 +60,7 @@ module.exports = function(grunt) {
 				separator: ';',
 			},
 			dist: {
-				src: ['js/vendor/jxhr.js', 'js/vendor/ripples.js', 'js/vendor/material.js', 'js/plugins.js', 'js/main.js'],
+				src: ['js/vendor/jquery.js', 'js/vendor/bootstrap.js', 'js/vendor/jxhr.js', 'js/vendor/ripples.js', 'js/vendor/material.js', 'js/plugins.js', 'js/main.js'],
 				dest: 'js/production.js'
 			}
 		}

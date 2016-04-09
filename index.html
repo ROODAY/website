@@ -7,9 +7,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="wot-verification" content="5c9a378b6a3e06b680cd">
 	<meta name="google-site-verification" content="t3RSMhp7xVvvL3lX46tGohe3woHimcFcUzUVsRZj1oc" />
+	
+	<meta name="theme-color" content="#673AB7">
+	<meta name="msapplication-TileColor" content="#673AB7">
+	<meta name="msapplication-TileImage" content="assets/favicons/favicon-144.png">
+	<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+
 	<link rel="canonical" href="https://rooday.com/" />
 	<link rel="alternate" href="https://rooday.com/" hreflang="en-us" />
-	<meta name="theme-color" content="#673AB7">
 
 	<link rel="shortcut icon" href="assets/favicons/favicon.ico">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="assets/favicons/favicon.ico">
@@ -28,27 +33,21 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/favicon-76.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/favicon-152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/favicon-180.png">
-	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="assets/favicons/favicon-144.png">
-	<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+	
 
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-	<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-	<link rel="import" href="bower_components/polymer/polymer.html">
-	<link rel="import" href="bower_components/core-elements/core-elements.html">
-	<link rel="import" href="bower_components/core-icons/core-icons.html">
-	<link rel="import" href="bower_components/paper-elements/paper-elements.html">
-	<link rel="import" href="bower_components/x-meme/x-meme.html">
-
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/material.css">
 	<link rel="stylesheet" href="css/critical.css?__inline=true">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/material.css">
 	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/vendor/webcomponents.min.js"></script>
 </head>
 <body>
-	<x-meme id="meme" type="doge" top="such webcomponent" bottom="much sexy" class="hidden-xs hidden-sm"></x-meme>
 	<div class="panel panel-default" id="transition"></div>
 	<div id="loading-container">
 		<div id="circle-container" class="hidden-xs">
@@ -61,6 +60,7 @@
 		<div class="loading-circle" id="loading-purple2"></div>
 		<div class="loading-circle" id="grower"></div>
 	</div>
+
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
@@ -73,17 +73,38 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
-	      	<li><a href="#top" target="_blank">Home</a></li>
+	      	<li><a href="#top">Home</a></li>
+	      	<li><a href="#aboutrow">About</a></li>
 	      	<li><a href="#projects">Projects</a></li>
 	      	<li><a href="https://blog.rooday.com" target="_blank">Blog</a></li>
-			<li><a href="resume.pdf" target="_blank">Resume</a></li>
+			<li><a href="resume.pdf" target="_blank">R&eacute;sum&eacute;</a></li>
 	      </ul>
 	    </div>
 	  </div>
 	</nav>
+
+	<div class="modal fade" id="githubRssModal" tabindex="-1" role="dialog" aria-labelledby="Github RSS Feed">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">GitHub Recent Activity</h4>
+	      </div>
+	      <div class="modal-body">
+			<ul id="gh_repos">
+				<li class="loading">Loading repositories...</li>
+			</ul>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 	<main>
 		<div id="scrolldown" class="hidden-xs">
-			<a href="#projects"><core-icon icon="expand-more"></core-icon> </a>
+			<a href="#aboutrow"><i class="material-icons">expand_more</i></a>
 		</div>
 		<div class="jumbotron" id="top">
 			<div id="jumbotron-content">
@@ -96,92 +117,196 @@
 				</div>
 			</div>
 		</div>
-		<div id="projects" class="resize container">
-			<h1>Projects</h1>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="panel panel-primary" id="schoolwork">
-					    <div class="panel-heading">
-					        <h3 class="panel-title">Schoolwork Repository</h3>
-					    </div>
-					    <div href="http://rooday.com/schoolwork/" class="panel-body schoolworklink" data-link="schoolwork" data-color="#5264ae">
-					        A collection of miscellaneous school work.
-					    </div>
-					    <div class="panel-footer">
-					    	<a href="https://github.com/ROODAY/schoolwork" target="_blank"><span class="icon-github"></span></a>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="panel panel-primary" id="earthinvader">
-					    <div class="panel-heading">
-					        <h3 class="panel-title">Earth Invader</h3>
-					    </div>
-					    <a href="http://wwpol.github.io/Earth-Invader/" target="_blank" class="panel-body">
-					        WWPOL entry for JS13k game competition.
-					    </a>
-					    <div class="panel-footer">
-					    	<a href="https://github.com/WWPOL/Earth-Invader" target="_blank"><span class="icon-github"></span></a>
-					    </div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="panel panel-primary" id="youphoria">
-					    <div class="panel-heading">
-					        <h3 class="panel-title">Youphoria</h3>
-					    </div>
-					    <a href="https://youphoria.herokuapp.com/" target="_blank" class="panel-body">
-					        A Pandora-like service for continuous streaming of YouTube videos.
-					    </a>
-					    <div class="panel-footer">
-					    	<a href="https://github.com/ROODAY/Youphoria" target="_blank"><span class="icon-github"></span></a>
-					    </div>
-					</div>
-				</div>
+
+		<div class="row">
+			<div id="aboutrow" class="container">
+				<h1>About Me</h1>
+				<p class="lead">
+					Test test test
+				</p>
+				<p>
+					I am a...
+				</p>
 			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="panel panel-primary" id="showerify">
-					    <div class="panel-heading">
-					        <h3 class="panel-title">Showerify</h3>
-					    </div>
-					    <a href="https://showerify.herokuapp.com/" target="_blank" class="panel-body">
-					        Voice-controlled spotify music while you shower.
-					    </a>
-					    <div class="panel-footer">
-					    	<a href="https://github.com/ROODAY/showerify" target="_blank"><span class="icon-github"></span></a>
-					    </div>
+		</div>
+
+		<div class="row">
+			<div id="projects" class="container">
+				<h1>Projects <a id="rss-icon" href="javascript:void(0);" data-toggle="modal" data-target="#githubRssModal" data-toggle="tooltip" data-placement="right" title="" data-original-title="Recent GitHub Activity"><i class="material-icons">rss_feed</i></a></h1>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="schoolwork">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Schoolwork Repository</h3>
+						    </div>
+						    <div href="http://rooday.com/schoolwork/" class="panel-body schoolworklink" data-link="schoolwork" data-color="#5264ae">
+						        A collection of miscellaneous school work.
+						    </div>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/schoolwork" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="youphoria">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Shoke</h3>
+						    </div>
+						    <a href="https://youphoria.herokuapp.com/" target="_blank" class="panel-body">
+						        A Pandora-like service for continuous streaming of YouTube videos.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/Youphoria" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="youphoria">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Provender - Costing</h3>
+						    </div>
+						    <a href="https://youphoria.herokuapp.com/" target="_blank" class="panel-body">
+						        A Pandora-like service for continuous streaming of YouTube videos.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/Youphoria" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="panel panel-primary" id="animatrix">
-					    <div class="panel-heading">
-					        <h3 class="panel-title">G-Pong</h3>
-					    </div>
-					    <a href="https://github.com/WWPOL/G-Pong" target="_blank" class="panel-body">
-					        Gravity Pong, made for HackExeter Spring 2015.
-					    </a>
-					    <div class="panel-footer">
-					    	<a href="https://github.com/WWPOL/G-Pong" target="_blank"><span class="icon-github"></span></a>
-					    </div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="earthinvader">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Earth Invader</h3>
+						    </div>
+						    <a href="http://wwpol.github.io/Earth-Invader/" target="_blank" class="panel-body">
+						        WWPOL entry for JS13k game competition.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/WWPOL/Earth-Invader" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="animatrix">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">G-Pong</h3>
+						    </div>
+						    <a href="https://github.com/WWPOL/G-Pong" target="_blank" class="panel-body">
+						        Gravity Pong, made for HackExeter Spring 2015.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/WWPOL/G-Pong" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="animatrix">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">CV-Pong</h3>
+						    </div>
+						    <a href="https://github.com/WWPOL/G-Pong" target="_blank" class="panel-body">
+						        Gravity Pong, made for HackExeter Spring 2015.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/WWPOL/G-Pong" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="panel panel-primary" id="ballsim">
-					    <div class="panel-heading">
-					        <h3 class="panel-title">Ball Simulator 2015</h3>
-					    </div>
-					    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
-					        A Javascript implementation of the classic ball game in canvas.
-					    </a>
-					    <div class="panel-footer">
-					    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
-					    </div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="ballsim">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Ball Simulator 2015</h3>
+						    </div>
+						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
+						        A Javascript implementation of the classic ball game in canvas.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="ballsim">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">ChatCloud</h3>
+						    </div>
+						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
+						        A Javascript implementation of the classic ball game in canvas.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="ballsim">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Hexclock</h3>
+						    </div>
+						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
+						        A Javascript implementation of the classic ball game in canvas.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="ballsim">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Why PC</h3>
+						    </div>
+						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
+						        A Javascript implementation of the classic ball game in canvas.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="ballsim">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">New Year Countdown</h3>
+						    </div>
+						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
+						        A Javascript implementation of the classic ball game in canvas.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-primary" id="ballsim">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Jong</h3>
+						    </div>
+						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
+						        A Javascript implementation of the classic ball game in canvas.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<p class="lead text-center">
+						Interested? <br>
+						<small>
+							Check out my r&eacute;sum&eacute;!
+						</small>
+					</p>
+				</div>
+				<!--div class="row">
+					<div class="col-md-6">
 						<h2>Languages &amp; Technologies I've Used</h2>
 						<ul>
 							<li>HTML</li>
@@ -197,18 +322,9 @@
 							<li>Socket.io</li>
 							<li>Polymer</li>
 						</ul>
-				</div>
-				<div class="col-md-6">
-					<section>
-					  <h2>Recent Work</h2>
-					  <ul id="gh_repos">
-					    <li class="loading">Status updating...</li>
-					    <paper-spinner active></paper-spinner>
-					  </ul>
-					</section>
-				</div>
+					</div>
+				</div-->
 			</div>
-			
 		</div>
 	</main>
 	<footer>
@@ -220,7 +336,6 @@
 						<li><a class="sociallink" href="https://www.facebook.com/sooperooday" target="_blank">Facebook</a></li>
 						<li><a class="sociallink" href="https://twitter.com/rudytheninja" target="_blank">Twitter</a></li>
 						<li><a class="sociallink" href="https://plus.google.com/u/0/+RudyRaveendran/posts" target="_blank">Google+</a></li>
-						<li><a class="sociallink" href="https://www.youtube.com/user/SOOPEROODAY" target="_blank">Youtube</a></li>
 						<li><a class="sociallink" href="https://github.com/ROODAY" target="_blank">Github</a></li>
 						<li><a class="sociallink" href="http://www.linkedin.com/in/rooday" target="_blank">LinkedIn</a></li>
 					</ul>
@@ -230,13 +345,27 @@
 
 					<form onsubmit="sendemail()" class="form-horizontal" id="contactform">
 					    <fieldset>
-					        <div class="form-group container">
-					            <div class="col-lg-10">
-					            	<input class="form-control floating-label" id="messagesubject" type="text" placeholder="Subject" id="subject"><br>
-					                <textarea class="form-control floating-label" rows="3" id="messagebody" placeholder="Tell me something!"></textarea>
-					            <div class="col-lg-10 col-lg-offset-2">
-					                <button type="submit" class="btn btn-primary" data-content="Opening your mail client..." data-toggle="snackbar" id="sendmessage">Send</button>
-					            </div>
+					        <div class="form-group col-md-12">
+					        	<div class="row">
+					        		<div class="col-md-6">
+					        			<input class="form-control" id="inputEmail" placeholder="Name">
+					        		</div>
+					        		<div class="col-md-6">
+					        			<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+					        		</div>
+					        	</div>
+					        	<div class="row">
+					        		<div class="col-md-12">
+										<input type="email" class="form-control" id="inputEmail" placeholder="Subject">
+					        		</div>
+					        	</div>
+					        	<div class="row">
+					        		<div class="col-md-12">
+										<textarea class="form-control" rows="3" id="textArea"></textarea>
+										<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+					        		</div>
+					        	</div>
+					            <button type="submit" class="btn btn-primary" data-content="Opening your mail client..." data-toggle="snackbar" id="sendmessage">Send</button>
 					        </div>
 					    </fieldset>
 					</form>
@@ -249,8 +378,7 @@
 			</div>
 		</div>
 	</footer>
-	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
     <script src="js/production.js"></script>
     <script>
 	  jQuery("#headline").fitText();

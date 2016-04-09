@@ -52,8 +52,10 @@ $(window).load(function() {
 
 $(document).ready(function(){
 	$.material.init();
-
-	var sp = new Space(500);
+	var sp = new Space(1000);
+	var navbarheight = $("#navbar").height();
+	var listener = new window.keypress.Listener();
+	$('#rss-icon').tooltip({placement: 'right'});
 
 	if (!window.jXHR){
         var jxhr = document.createElement('script');
@@ -69,14 +71,14 @@ $(document).ready(function(){
         target: '#gh_repos'
     });
 
-    var navbarheight = $("#navbar").height();
+    
     $('.nav a').on('click', function(){
     	if ($(window).width() <= 767) {
     		$(".navbar-toggle").click();
     	}
 	});
 
-	var listener = new window.keypress.Listener();
+	
 	listener.sequence_combo("up up down down left right left right b a enter", function() {
 	    var s = document.createElement('script');
 	    s.setAttribute('src','https://nthitz.github.io/turndownforwhatjs/tdfw.js');
@@ -89,9 +91,6 @@ $(document).ready(function(){
 	      s.src = ss[i];
 	      document.body.appendChild(s);
 	    } void(0);
-	}, true);
-	listener.sequence_combo("d o g e", function() {
-		$("#meme").css("margin-top", "-1vh");
 	}, true);
 	listener.sequence_combo("n i c e", function() {
         var url = window.location.href + "nice";

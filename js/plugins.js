@@ -145,8 +145,8 @@ var github = (function(){
 
   this.vec= [sign()*Math.random(),sign()*Math.random()]
 
-  this.x = Math.floor(space.c_width/2)+this.vec[0]*10000;
-  this.y = Math.floor(space.c_height/2)+this.vec[1]*10000;
+  this.x = Math.floor(space.c_width/2)+this.vec[0]*50000;
+  this.y = Math.floor(space.c_height/2)+this.vec[1]*50000;
 }
 
 Star.prototype.update = function() {
