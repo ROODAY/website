@@ -1,0 +1,139 @@
+{
+  "basics": {
+    "name": "Rudhra Raveendran",
+    "label": "Programmer. Designer. Creator.",
+    "picture": "http://rooday.com/assets/images/me.png",
+    "email": "rudhraraveendran@gmail.com",
+    "phone": "(781) 605-8171",
+    "website": "https://rooday.com/",
+    "summary": "I am a senior at Lincoln Sudbury Regional High School, and I love Computer Science. I have been programming for over four years, over which I have picked up a variety of languages and skills. Currently, I work as a software developer for Provender, focusing on front end applications while occasionally contributing to the main Ruby on Rails application. Outside of work I frequently spend time on a wide range of personal projects (programming and otherwise), as well as participate in local hackathons. ",
+    "location": {
+      "address": "387 Peakham Road",
+      "postalCode": "MA 01776",
+      "city": "Sudbury",
+      "countryCode": "US",
+      "region": "Massachusetts"
+    },
+    "profiles": []
+  },
+  "work": [
+    {
+      "company": "Provender",
+      "position": "Software Developer",
+      "website": "https://www.provender.com/",
+      "startDate": "07/20/2015",
+      "endDate": "Current",
+      "summary": "Provender is an online market place that serves as a direct connection between dozens of local farmers and high quality restaurants. A brand new way of going from farm to fork.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Lincoln Sudbury Regional High School",
+      "area": "General",
+      "studyType": "",
+      "startDate": "2012",
+      "endDate": "2016",
+      "gpa": "3.47",
+      "courses": [
+        "Intro to Programming (Ruby)",
+        "iOS Programming (Objective-C)",
+        "iOS Programming - TA (Swift)",
+        "AP Java (Self-studied)"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "First Place at the MIT Blueprint 2016 Hackathon",
+      "date": "02/28/2016",
+      "awarder": "MIT Blueprint",
+      "summary": "My team's project, CV-Pong, was a variation on the game of pong where the game is played in a 3D space as opposed to a 2D one. Players' perspectives are behind their paddle, which can move along both the X and Y axis. Players control their paddles with their webcam, as the project uses OpenCV to track objects that the in game paddle follows. (For demonstration at Blueprint we used a bright blue glove)"
+    },
+    {
+      "title": "First Place at the HackExeter Spring 2015 Hackathon",
+      "date": "05/23/2015",
+      "awarder": "HackExeter",
+      "summary": "My team's project, G-Pong, was a variation on the game of pong where players control a gravity well that influences the ball, rather than controlling a paddle. The game can be played by two players on separate machines, and others who join the game are able to spectate the match in progress."
+    },
+    {
+      "title": "Second Place at the LexHack 2015 Hackathon",
+      "date": "09/19/2015",
+      "awarder": "LexHack",
+      "summary": "My team's project, SquadUp, was an attempt to solve a problem our friend group faced constantly. We would try to organize a group event, but the Facebook chat used for that purpose would quickly get off track and out of hand, so for LexHack we made a webapp that focused just on the place and time of events, and allowed people to RSVP to the event and track those on their way through Google Maps."
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Languages",
+      "level": "",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "C",
+        "C++",
+        "Java",
+        "Python",
+        "Ruby",
+        "Swift",
+        "Lua",
+        "Shell",
+        "Bash",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Technologies",
+      "level": "",
+      "keywords": [
+        "Node.js",
+        "Express.js",
+        "jQuery",
+        "Socket.io",
+        "SASS",
+        "Google Polymer",
+        "Ruby on Rails"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "",
+      "keywords": [
+        "Docker",
+        "Nginx",
+        "Linux (Ubuntu)",
+        "Windows",
+        "OS X",
+        "Git (GitHub)",
+        "Vagrant"
+      ]
+    }
+  ],
+  "languages": [],
+  "interests": [
+    {
+      "name": "Robotics",
+      "keywords": [
+        "FIRST Robotics Competition"
+      ]
+    },
+    {
+      "name": "Martial Arts",
+      "keywords": [
+        "1st Degree Black Belt"
+      ]
+    },
+    {
+      "name": "Classical Guitar",
+      "keywords": []
+    },
+    {
+      "name": "Video Games",
+      "keywords": []
+    }
+  ],
+  "references": []
+}
