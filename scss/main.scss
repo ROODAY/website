@@ -48,8 +48,7 @@ a {
         color: $grey-50;
         
         i {
-            width: 50px;
-            height: 50px;
+            font-size: 50px;
         }
     }
 }
@@ -145,7 +144,29 @@ footer {
         }
     }
 
-    .form-control {
+    .form-control .empty {
+        color: $grey-50 !important;
+        border-bottom: 1px solid $grey-50 !important;
+    }
+    .help-block {
+        color: $grey-50 !important;
+    }
+    ::-webkit-input-placeholder {
+       color: $grey-50 !important;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+       color: $grey-50 !important;  
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: $grey-50 !important;  
+    }
+
+    :-ms-input-placeholder {  
+       color: $grey-50 !important;  
+    }
+    .form-control-wrapper .form-control, .form-control {
         color: $grey-50 !important;
         border-bottom: 1px solid $grey-50 !important;
     }
@@ -170,82 +191,15 @@ footer {
     }
 }
 
-.schoolworklink {
+#schoolworklink {
     cursor: pointer;
 }
 
-
+.panel-project {
+    background-size: cover !important;
+}
 
 #projects, footer {
     z-index: 10 !important;
     position: relative !important;
-}
-
-
-
-#schoolwork {
-    .panel-body {
-        background: 
-        linear-gradient(
-          rgba(0, 0, 0, 0.45), 
-          rgba(0, 0, 0, 0.45)
-        ),
-        url("../assets/images/schoolwork.jpg");
-        background-size: cover;
-    }
-}
-#earthinvader {
-    .panel-body {
-        background: 
-        linear-gradient(
-          rgba(0, 0, 0, 0.45), 
-          rgba(0, 0, 0, 0.45)
-        ),
-        url("../assets/images/earthinvader.jpg");
-        background-size: cover;
-    }
-}
-#youphoria {
-    .panel-body {
-        background: 
-        linear-gradient(
-          rgba(0, 0, 0, 0.45), 
-          rgba(0, 0, 0, 0.45)
-        ),
-        url("../assets/images/youphoria.jpg");
-        background-size: cover;
-    }
-}
-#showerify {
-    .panel-body {
-        background: 
-        linear-gradient(
-          rgba(0, 0, 0, 0.45), 
-          rgba(0, 0, 0, 0.45)
-        ),
-        url("../assets/images/showerify.jpg");
-        background-size: cover;
-    }
-}
-#gpong {
-    .panel-body {
-        background: 
-        linear-gradient(
-          rgba(0, 0, 0, 0.45), 
-          rgba(0, 0, 0, 0.45)
-        ),
-        url("../assets/images/gpong.jpg");
-        background-size: cover;
-    }
-}
-#ballsim {
-    .panel-body {
-        background: 
-            linear-gradient(
-          rgba(0, 0, 0, 0.45), 
-          rgba(0, 0, 0, 0.45)
-        ),
-        url("../assets/images/ballsim.jpg");
-        background-size: cover;
-    }
 }

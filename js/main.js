@@ -102,11 +102,20 @@ $(document).ready(function(){
             window.location.href = url;
         }, 1000);
 	}, true);
+	listener.sequence_combo("b l e u", function() {
+        window.bleu = true;
+	}, true);
 
 	$('#contactform').submit(function () {
 		sendemail();
 		return false;
 	});
+
+	var projects = $('[data-project-image]');
+	for (var i = 0; i < projects.length; i++) {
+		var url = $(projects[i]).attr("data-project-image")
+		$(projects[i]).css("background", 'linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url("' + url + '")');
+	}
 
 	$(".schoolworklink").click(function(){
         var link = $(this).data("link");

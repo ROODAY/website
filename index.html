@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>ROODAY</title>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ROODAY</title>
 	<meta name="wot-verification" content="5c9a378b6a3e06b680cd">
 	<meta name="google-site-verification" content="t3RSMhp7xVvvL3lX46tGohe3woHimcFcUzUVsRZj1oc" />
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+	
+	<meta property="og:title" content="ROODAY" />
+	<meta name="twitter:title" content="ROODAY" />
+	<meta itemprop="name" content="ROODAY">
+	<meta property="og:url" content="https://rooday.com/" />
+	<meta name="twitter:url" content="https://rooday.com/">
+	<meta property="og:image" content="http://rooday.com/assets/images/rooday.png"/>
+	<meta name="twitter:image" content="http://rooday.com/assets/images/rooday.png">
+	<meta itemprop="image" content="http://rooday.com/assets/images/rooday.png">
+	<meta name="twitter:card" content="summary" />
+	<meta name="description" content="Personal website of Rudhra Raveendran" />
+	<meta name="twitter:description" content="Personal website of Rudhra Raveendran" />
+	<meta property="og:description" content="Personal website of Rudhra Raveendran"/>
+	<meta itemprop="description" content="Personal website of Rudhra Raveendran">
+	<meta property="og:site_name" content="ROODAY"/>
+	<meta property="og:locale" content="en_US" />
+	<meta name="content-language" content="en_US">
+	<meta name="author" content="Rudhra Raveendran">
+	<meta name="web_author" content="Rudhra Raveendran">
+	<meta name="copyright" content="Rudhra Raveendran">
+	<meta name="twitter:creator" content="@rudytheninja" />
+	<link rel="author" href="https://plus.google.com/+RudyRaveendran"/>
 	
 	<meta name="theme-color" content="#673AB7">
 	<meta name="msapplication-TileColor" content="#673AB7">
@@ -71,7 +94,7 @@
 	      	<li><a href="#aboutrow">About</a></li>
 	      	<li><a href="#projects">Projects</a></li>
 	      	<li><a href="https://blog.rooday.com" target="_blank">Blog</a></li>
-			<li><a href="resume.json" target="_blank">R&eacute;sum&eacute;</a></li>
+			<li><a href="resume.html" target="_blank">R&eacute;sum&eacute;</a></li>
 	      </ul>
 	    </div>
 	  </div>
@@ -126,11 +149,11 @@
 				<h1>Projects <a id="rss-icon" href="javascript:void(0);" data-toggle="modal" data-target="#githubRssModal" data-toggle="tooltip" data-placement="right" title="" data-original-title="Recent GitHub Activity"><i class="material-icons">rss_feed</i></a></h1>
 				<div class="row">
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="schoolwork">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
 						        <h3 class="panel-title">Schoolwork Repository</h3>
 						    </div>
-						    <div href="http://rooday.com/schoolwork/" class="panel-body schoolworklink" data-link="schoolwork" data-color="#5264ae">
+						    <div href="http://rooday.com/schoolwork/" id="schoolworklink" class="panel-body panel-project" data-project-image="../assets/images/projects/schoolwork.jpg" data-link="schoolwork" data-color="#5264ae">
 						        A collection of miscellaneous school work.
 						    </div>
 						    <div class="panel-footer">
@@ -139,40 +162,40 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="youphoria">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
 						        <h3 class="panel-title">Shoke</h3>
 						    </div>
-						    <a href="https://youphoria.herokuapp.com/" target="_blank" class="panel-body">
-						        A Pandora-like service for continuous streaming of YouTube videos.
+						    <a href="https://shoke.herokuapp.com/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/shoke.jpg">
+						        Shoke allows you to control your Google Play music using your voice.
 						    </a>
 						    <div class="panel-footer">
-						    	<a href="https://github.com/ROODAY/Youphoria" target="_blank"><span class="icon-github"></span></a>
+						    	<a href="https://github.com/ROODAY/Shoke" target="_blank"><span class="icon-github"></span></a>
 						    </div>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="youphoria">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
 						        <h3 class="panel-title">Provender - Costing</h3>
 						    </div>
-						    <a href="https://youphoria.herokuapp.com/" target="_blank" class="panel-body">
-						        A Pandora-like service for continuous streaming of YouTube videos.
+						    <a href="http://costing.provender.com/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/costing.jpg">
+						        Standalone HTML5 Web App for delivery calculations.
 						    </a>
 						    <div class="panel-footer">
-						    	<a href="https://github.com/ROODAY/Youphoria" target="_blank"><span class="icon-github"></span></a>
+						    	<a href="https://github.com/ROODAY/Provender-Delivery-Calculator" target="_blank"><span class="icon-github"></span></a>
 						    </div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="earthinvader">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
 						        <h3 class="panel-title">Earth Invader</h3>
 						    </div>
-						    <a href="http://wwpol.github.io/Earth-Invader/" target="_blank" class="panel-body">
-						        WWPOL entry for JS13k game competition.
+						    <a href="http://wwpol.github.io/Earth-Invader/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/earthinvader.jpg">
+						        WWPOL entry for JS13k game-making competition.
 						    </a>
 						    <div class="panel-footer">
 						    	<a href="https://github.com/WWPOL/Earth-Invader" target="_blank"><span class="icon-github"></span></a>
@@ -180,12 +203,12 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="animatrix">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
 						        <h3 class="panel-title">G-Pong</h3>
 						    </div>
-						    <a href="https://github.com/WWPOL/G-Pong" target="_blank" class="panel-body">
-						        Gravity Pong, made for HackExeter Spring 2015.
+						    <a href="https://github.com/WWPOL/G-Pong" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/gpong.jpg">
+						        WWPOL's First Place entry for HackExeter Spring 2015.
 						    </a>
 						    <div class="panel-footer">
 						    	<a href="https://github.com/WWPOL/G-Pong" target="_blank"><span class="icon-github"></span></a>
@@ -193,26 +216,26 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="animatrix">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
 						        <h3 class="panel-title">CV-Pong</h3>
 						    </div>
-						    <a href="https://github.com/WWPOL/G-Pong" target="_blank" class="panel-body">
-						        Gravity Pong, made for HackExeter Spring 2015.
+						    <a href="https://github.com/WWPOL/CV-Pong" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/cvpong.jpg">
+						        WWPOL's First Place entry for MIT Blueprint 2016.
 						    </a>
 						    <div class="panel-footer">
-						    	<a href="https://github.com/WWPOL/G-Pong" target="_blank"><span class="icon-github"></span></a>
+						    	<a href="https://github.com/WWPOL/CV-Pong" target="_blank"><span class="icon-github"></span></a>
 						    </div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="ballsim">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
 						        <h3 class="panel-title">Ball Simulator 2015</h3>
 						    </div>
-						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
+						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/ballsim.jpg">
 						        A Javascript implementation of the classic ball game in canvas.
 						    </a>
 						    <div class="panel-footer">
@@ -221,69 +244,69 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="ballsim">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
 						        <h3 class="panel-title">ChatCloud</h3>
 						    </div>
-						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
-						        A Javascript implementation of the classic ball game in canvas.
+						    <a href="https://facebookchatcloud.herokuapp.com/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/chatcloud.jpg">
+						        Turn Facebook chats into wordclouds.
 						    </a>
 						    <div class="panel-footer">
-						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    	<a href="https://github.com/ROODAY/ChatCloud" target="_blank"><span class="icon-github"></span></a>
 						    </div>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="ballsim">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
 						        <h3 class="panel-title">Hexclock</h3>
 						    </div>
-						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
-						        A Javascript implementation of the classic ball game in canvas.
+						    <a href="http://rooday.com/hexclock/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/hexclock.jpg">
+						        A simple clock with time converted into hex for background color.
 						    </a>
 						    <div class="panel-footer">
-						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    	<a href="https://github.com/ROODAY/hexclock" target="_blank"><span class="icon-github"></span></a>
 						    </div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="ballsim">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
-						        <h3 class="panel-title">Why PC</h3>
+						        <h3 class="panel-title">Why PC?</h3>
 						    </div>
-						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
-						        A Javascript implementation of the classic ball game in canvas.
+						    <a href="http://rooday.com/whypc/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/whypc.jpg">
+						        The no-nonsense, end all guide to why console gaming is no longer worth your time.
 						    </a>
 						    <div class="panel-footer">
-						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    	<a href="https://github.com/ROODAY/whypc" target="_blank"><span class="icon-github"></span></a>
 						    </div>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="ballsim">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
 						        <h3 class="panel-title">New Year Countdown</h3>
 						    </div>
-						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
-						        A Javascript implementation of the classic ball game in canvas.
+						    <a href="http://rooday.com/newyearcountdown/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/newyearcountdown.jpg">
+						        A simple countdown timer for the new year.
 						    </a>
 						    <div class="panel-footer">
-						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    	<a href="https://github.com/ROODAY/newyearcountdown" target="_blank"><span class="icon-github"></span></a>
 						    </div>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="panel panel-primary" id="ballsim">
+						<div class="panel panel-primary">
 						    <div class="panel-heading">
 						        <h3 class="panel-title">Jong</h3>
 						    </div>
-						    <a href="http://rooday.com/ballsim2015/" target="_blank" class="panel-body">
-						        A Javascript implementation of the classic ball game in canvas.
+						    <a href="https://github.com/ROODAY/Jong" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/jong.jpg">
+						        4 player multiplayer Pong with socket.io.
 						    </a>
 						    <div class="panel-footer">
-						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    	<a href="https://github.com/ROODAY/Jong" target="_blank"><span class="icon-github"></span></a>
 						    </div>
 						</div>
 					</div>
@@ -292,7 +315,7 @@
 					<p class="lead text-center">
 						Interested? <br>
 						<small>
-							Check out my <a href="resume.json" target="_blank">r&eacute;sum&eacute;</a>!
+							Check out my <a href="resume.html" target="_blank">r&eacute;sum&eacute;</a>!
 						</small>
 					</p>
 				</div>
@@ -333,8 +356,7 @@
 					        	</div>
 					        	<div class="row">
 					        		<div class="col-md-12">
-										<textarea class="form-control" rows="3" id="textArea"></textarea>
-										<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+										<textarea class="form-control" rows="3" id="textArea" placeholder="Your message"></textarea>
 					        		</div>
 					        	</div>
 					            <button type="submit" class="btn btn-primary" data-content="Opening your mail client..." data-toggle="snackbar" id="sendmessage">Send</button>
