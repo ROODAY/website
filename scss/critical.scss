@@ -54,7 +54,7 @@
 html,body {
 	font-size: 1rem;
 	overflow-x: hidden;
-	font-family: 'Open Sans', "RobotoDraft", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-family: $bodyfont;
 }
 
 .loading-circle {
@@ -62,7 +62,7 @@ html,body {
 	height: 50px;
 	border-radius: 100%;
 	display: inline-block;
-	@include transition(all 1s ease);
+	transition: all 1s ease;
 }
 
 #loading-green {
@@ -116,25 +116,25 @@ html,body {
 #loading-container {
 	z-index: 9999;
 	position: fixed;
-	background-color: #EEEEEE;
+	background-color: $grey-200;
 	width: 100vw;
 	height: 100vh;
-	@include transition(all 1s ease);
+	transition: all 1s ease;
 	#circle-container {
 		z-index: 99999;
 		@include center;
-		@include transition(all 1s ease);
+		transition: all 1s ease;
 	}
 }
 
 .jumbotron > * { 
-	@include transition(all 1s ease);
+	transition: all 1s ease;
 	opacity: 0.0; 
 	box-shadow: 0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16);
 }
 
 #headline {
-	font-family: 'Montserrat', "RobotoDraft", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-family: $headerfont;
 }
 
 #jumbotron-content {

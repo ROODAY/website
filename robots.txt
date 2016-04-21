@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /aikenscount/
+Disallow: /nice/
+Disallow: /.gitignore
+Disallow: /CNAME
+Disallow: /Gruntfile.js
+Disallow: /index.js
+Disallow: /package.json
+Disallow: /README.md
+Disallow: /resume.json
