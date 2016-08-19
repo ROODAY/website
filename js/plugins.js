@@ -134,6 +134,8 @@ var github = (function(){
  * Hyperspace by maxkolyanov https://github.com/maxkolyanov/hyperspace/blob/master/stars.js
  */
 
+ var starSpeed = 50000;
+
  var Star = function(space) {
   this.space = space;
 
@@ -145,8 +147,8 @@ var github = (function(){
 
   this.vec= [sign()*Math.random(),sign()*Math.random()]
 
-  this.x = Math.floor(space.c_width/2)+this.vec[0]*50000;
-  this.y = Math.floor(space.c_height/2)+this.vec[1]*50000;
+  this.x = Math.floor(space.c_width/2)+this.vec[0]*starSpeed;
+  this.y = Math.floor(space.c_height/2)+this.vec[1]*starSpeed;
 }
 
 Star.prototype.update = function() {

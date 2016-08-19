@@ -1,6 +1,13 @@
 @import 'variables';
 @import 'fonts';
 
+
+::selection {
+    background: #673ab7;
+    color: #fff;
+    text-shadow: none;
+}
+
 a {
     color: $deep-purple-300;
     transition: color 0.5s ease;
@@ -51,9 +58,12 @@ a {
     }
 }
 
+#spacer {
+    display: none;
+}
+
 .navbar {
     background: $deep-purple-500;
-    opacity: 0.0;
     transition: opacity 0.5s ease;
     box-shadow: 0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16);
     
@@ -83,6 +93,7 @@ a {
 .jumbotron {
     min-height: 100vh;
     color: $grey-50;
+    margin-bottom: 0 !important;
     #headline {
         text-align: center;
         font-size: 30rem;
@@ -105,6 +116,14 @@ a {
     padding: 0;
     opacity: 0;
     transition: opacity 0.5s ease;
+}
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 999999;
 }
 
 footer {

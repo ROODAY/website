@@ -18,20 +18,16 @@ $(window).load(function() {
 		"background-color": "#FFF"
 		
 	});
-	$("#loading-purple2").css({
-		"top": "0",
-		"z-index": "99999"
-	});
 
 	setTimeout(function(){
-		$("#circle-container").css("z-index", "9999");
-		$("#loading-purple2").css({
-			"width": "100vw",
-			"border-radius": "0",
-			"height": (2 * $("#navbar").height())
-			
+		$("#circle-container").css({
+			"z-index": "9999",
+			"display": "none"
 		});
 		$("#grower").css({
+			"background": 'url("../assets/images/space.jpg")',
+			"background-size": "cover",
+   			"background-position": "fixed",
 			"border-radius": "0",
 			"width": "100vw",
 			"height": "100vh"
@@ -57,6 +53,8 @@ $(document).ready(function(){
 	var listener = new window.keypress.Listener();
 	$('#rss-icon').tooltip({placement: 'right'});
 
+	$("#headline").fitText();
+
 	if (!window.jXHR){
         var jxhr = document.createElement('script');
         jxhr.type = 'text/javascript';
@@ -78,10 +76,12 @@ $(document).ready(function(){
     	}
 	});
 
+	$("#spacer").css("height", $("#navbar").height() + "px");
+
 	
 	listener.sequence_combo("up up down down left right left right b a enter", function() {
 	    var s = document.createElement('script');
-	    s.setAttribute('src','https://nthitz.github.io/turndownforwhatjs/tdfw.js');
+	    s.setAttribute('src','js/tdfw.js');
 	    document.body.appendChild(s);
 	}, true);
 	listener.sequence_combo("a b a c a b b", function() {
@@ -91,6 +91,22 @@ $(document).ready(function(){
 	      s.src = ss[i];
 	      document.body.appendChild(s);
 	    } void(0);
+	}, true);
+	listener.sequence_combo("l u d i c r o u s", function() {
+		var audio = new Audio('assets/audio/hyperspace.mp3');
+		audio.play();
+		var starSpeedInterval = setInterval(function(){
+			if (starSpeed > 500) {
+				starSpeed -= 50;
+			} else {
+				clearInterval(starSpeedInterval);
+			}
+		}, 1);
+		setTimeout(function(){
+			clearInterval(starSpeedInterval);
+			starSpeed = 50000;
+		}, 10000);
+	    
 	}, true);
 	listener.sequence_combo("n i c e", function() {
         var url = window.location.href + "nice";
@@ -145,10 +161,12 @@ $(document).ready(function(){
 	});
 
 	$(window).scroll(function() {
-	    if ($(window).scrollTop() > ($(window).height() - navbarheight)) {
-	    	$(".navbar").css("opacity", "1.0");
+	    if ($(window).scrollTop() > $(window).height()) {
+	    	$(".navbar").addClass("nav-fixed");
+	    	$("#spacer").css("display", "block");
 	    } else {
-	    	$(".navbar").css("opacity", "0.0");
+	    	$(".navbar").removeClass("nav-fixed");
+	    	$("#spacer").css("display", "none");
 	    }
 	    if ($(window).scrollTop() > 30) {
 	        $("#scrolldown").css("opacity", "0.0");
@@ -158,7 +176,6 @@ $(document).ready(function(){
 	});
 
 	$(window).resize(function() {
-		$("#spacer").height($("#navbar").height());
 		$("#top").height($(window).height - $("#navbar").height());
 	});
 });
