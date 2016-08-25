@@ -57,12 +57,16 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/favicon-152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/favicon-180.png">
 
-	<link rel="stylesheet" href="css/critical.css?__inline=true">
+	<style>
+.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}.animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}@-webkit-keyframes pulse{0%{-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)}50%{-webkit-transform:scale3d(1.1, 1.1, 1.1);transform:scale3d(1.1, 1.1, 1.1)}100%{-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)}}@keyframes pulse{0%{-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)}50%{-webkit-transform:scale3d(1.1, 1.1, 1.1);transform:scale3d(1.1, 1.1, 1.1)}100%{-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)}}.pulse{-webkit-animation-name:pulse;animation-name:pulse}html,body{font-size:16px !important;overflow-x:hidden;font-family:"Open Sans",Helvetica,Arial,sans-serif !important}.loading-circle{width:50px;height:50px;border-radius:100%;display:inline-block;transition:all 1s ease}#loading-green{background-color:#4CAF50;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite}#loading-blue{background-color:#3F51B5;-webkit-animation-delay:1s;-webkit-animation-iteration-count:infinite;-moz-animation-delay:1s;-moz-animation-iteration-count:infinite}#loading-purple{background-color:#673AB7;-webkit-animation-delay:2s;-webkit-animation-iteration-count:infinite;-moz-animation-delay:2s;-moz-animation-iteration-count:infinite}#loading-purple2{background-color:#673AB7;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}#loading-red{background-color:#F44336;-webkit-animation-delay:3s;-webkit-animation-iteration-count:infinite;-moz-animation-delay:3s;-moz-animation-iteration-count:infinite}#loading-yellow{background-color:#FFEB3B;-webkit-animation-delay:4s;-webkit-animation-iteration-count:infinite;-moz-animation-delay:4s;-moz-animation-iteration-count:infinite}#grower{background:#FFF;z-index:99998;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}#loading-container{z-index:9999;position:fixed;background-color:#eee;width:100vw;height:100vh;transition:all 1s ease}#loading-container #circle-container{z-index:99999;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%);transition:all 1s ease}.jumbotron>*{transition:all 1s ease;opacity:0.0;margin:0;box-shadow:0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16)}#headline{font-family:"Montserrat",Helvetica,Arial,sans-serif !important}#jumbotron-content{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}
+/*# sourceMappingURL=critical.css.map */
+
+</style>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/material.css">
 	<link rel="stylesheet" href="css/main.css">
 
-	<script src="js/vendor/webcomponents.min.js"></script>
+	<script async src="js/vendor/webcomponents.min.js"></script>
 </head>
 <body>
 	<div class="panel panel-default" id="transition"></div>
@@ -104,7 +108,7 @@
 				<h1 id="headline">ROODAY</h1>
 				<div id="about" class="container">
 					<h2>Rudhra Raveendran</h2>
-					<p>
+					<p class="hidden-xs">
 						Programmer.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Designer.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creator.
 					</p>
 				</div>
@@ -232,6 +236,32 @@
 					<div class="col-md-4">
 						<div class="panel panel-primary">
 						    <div class="panel-heading">
+						        <h3 class="panel-title">Onion or Not?</h3>
+						    </div>
+						    <a href="http://rooday.com/Onion-Or-Not/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/onionornot.jpg">
+						        A simple game where you guess whether an article came from The Onion or not.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/Onion-Or-Not" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-primary">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Why PC?</h3>
+						    </div>
+						    <a href="https://rooday.com/whypc/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/whypc.jpg">
+						        The no-nonsense, end all guide to why console gaming is no longer worth your time.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/whypc" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-primary">
+						    <div class="panel-heading">
 						        <h3 class="panel-title">Ball Simulator 2015</h3>
 						    </div>
 						    <a href="https://rooday.com/ballsim2015/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/ballsim.jpg">
@@ -239,6 +269,21 @@
 						    </a>
 						    <div class="panel-footer">
 						    	<a href="https://github.com/ROODAY/ballsim2015" target="_blank"><span class="icon-github"></span></a>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="panel panel-primary">
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Hexclock</h3>
+						    </div>
+						    <a href="https://rooday.com/hexclock/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/hexclock.jpg">
+						        A simple clock with time converted into hex for background color.
+						    </a>
+						    <div class="panel-footer">
+						    	<a href="https://github.com/ROODAY/hexclock" target="_blank"><span class="icon-github"></span></a>
 						    </div>
 						</div>
 					</div>
@@ -258,34 +303,6 @@
 					<div class="col-md-4">
 						<div class="panel panel-primary">
 						    <div class="panel-heading">
-						        <h3 class="panel-title">Hexclock</h3>
-						    </div>
-						    <a href="https://rooday.com/hexclock/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/hexclock.jpg">
-						        A simple clock with time converted into hex for background color.
-						    </a>
-						    <div class="panel-footer">
-						    	<a href="https://github.com/ROODAY/hexclock" target="_blank"><span class="icon-github"></span></a>
-						    </div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="panel panel-primary">
-						    <div class="panel-heading">
-						        <h3 class="panel-title">Why PC?</h3>
-						    </div>
-						    <a href="https://rooday.com/whypc/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/whypc.jpg">
-						        The no-nonsense, end all guide to why console gaming is no longer worth your time.
-						    </a>
-						    <div class="panel-footer">
-						    	<a href="https://github.com/ROODAY/whypc" target="_blank"><span class="icon-github"></span></a>
-						    </div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="panel panel-primary">
-						    <div class="panel-heading">
 						        <h3 class="panel-title">New Year Countdown</h3>
 						    </div>
 						    <a href="https://rooday.com/newyearcountdown/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/newyearcountdown.jpg">
@@ -296,6 +313,8 @@
 						    </div>
 						</div>
 					</div>
+				</div>
+				<div class="row">
 					<div class="col-md-4">
 						<div class="panel panel-primary">
 						    <div class="panel-heading">
@@ -306,21 +325,6 @@
 						    </a>
 						    <div class="panel-footer">
 						    	<a href="https://github.com/ROODAY/Jong" target="_blank"><span class="icon-github"></span></a>
-						    </div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="panel panel-primary">
-						    <div class="panel-heading">
-						        <h3 class="panel-title">Onion or Not?</h3>
-						    </div>
-						    <a href="http://rooday.com/Onion-Or-Not/" target="_blank" class="panel-body panel-project" data-project-image="../assets/images/projects/onionornot.jpg">
-						        A simple game where you guess whether an article came from The Onion or not.
-						    </a>
-						    <div class="panel-footer">
-						    	<a href="https://github.com/ROODAY/Onion-Or-Not" target="_blank"><span class="icon-github"></span></a>
 						    </div>
 						</div>
 					</div>
@@ -339,44 +343,23 @@
 	<footer>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-4">
-					<h2>Find Me Elsewhere</h2>
-					<ul id="sociallinks">
-						<li><a class="sociallink" href="https://www.facebook.com/sooperooday" target="_blank">Facebook</a></li>
-						<li><a class="sociallink" href="https://twitter.com/rudytheninja" target="_blank">Twitter</a></li>
-						<li><a class="sociallink" href="https://plus.google.com/+RudyRaveendran" target="_blank">Google+</a></li>
-						<li><a class="sociallink" href="https://github.com/ROODAY" target="_blank">Github</a></li>
-						<li><a class="sociallink" href="http://www.linkedin.com/in/rooday" target="_blank">LinkedIn</a></li>
-					</ul>
-				</div>
-				<div class="col-md-8 hidden-xs">
+				<div class="col-md-2 hidden-xs"></div>
+				<div class="col-md-8">
 					<h2>Contact Me</h2>
-
-					<form onsubmit="sendemail()" class="form-horizontal" id="contactform">
-					    <fieldset>
-					        <div class="form-group col-md-12">
-					        	<div class="row">
-					        		<div class="col-md-6">
-					        			<input class="form-control" id="inputEmail" placeholder="Name">
-					        		</div>
-					        		<div class="col-md-6">
-					        			<input type="email" class="form-control" id="inputEmail" placeholder="Email">
-					        		</div>
-					        	</div>
-					        	<div class="row">
-					        		<div class="col-md-12">
-										<input type="email" class="form-control" id="inputEmail" placeholder="Subject">
-					        		</div>
-					        	</div>
-					        	<div class="row">
-					        		<div class="col-md-12">
-										<textarea class="form-control" rows="3" id="textArea" placeholder="Your message"></textarea>
-					        		</div>
-					        	</div>
-					            <button type="submit" class="btn btn-primary" data-content="Opening your mail client..." data-toggle="snackbar" id="sendmessage">Send</button>
-					        </div>
-					    </fieldset>
-					</form>
+					<div class="col-md-6">
+						<ul class="sociallinks">
+							<li><a class="sociallink" href="https://www.facebook.com/sooperooday" target="_blank">Facebook</a></li>
+							<li><a class="sociallink" href="https://twitter.com/rudytheninja" target="_blank">Twitter</a></li>
+							<li><a class="sociallink" href="https://plus.google.com/+RudyRaveendran" target="_blank">Google+</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<ul class="sociallinks">
+							<li><a class="sociallink" href="mailto:rudhraraveendran@gmail.com" target="_blank">Email</a></li>
+							<li><a class="sociallink" href="https://github.com/ROODAY" target="_blank">Github</a></li>
+							<li><a class="sociallink" href="http://www.linkedin.com/in/rooday" target="_blank">LinkedIn</a></li>
+						</ul>
+					</div>	
 				</div>
 			</div>
 		</div>
