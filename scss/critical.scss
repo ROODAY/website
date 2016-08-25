@@ -127,6 +127,16 @@ html,body {
 	}
 }
 
+#transition {
+    margin-top: -150vh;
+    transition: background-color 1s ease, margin-top 1s ease;
+    height: 100vh;
+    width: 100vw; 
+    position: fixed;
+    z-index: 999999;
+    background-color: $deep-purple-500;
+}
+
 .jumbotron > * { 
 	transition: all 1s ease;
 	opacity: 0.0;
