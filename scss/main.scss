@@ -11,16 +11,18 @@
 a {
     color: $deep-purple-300;
     transition: color 0.5s ease;
-    
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
         color: $deep-purple-700;
         text-decoration: none;
     }
 
     &.panel-body {
         display: block;
-        
-        &:hover, &:focus {
+
+        &:hover,
+        &:focus {
             color: $grey-50;
         }
     }
@@ -38,10 +40,10 @@ a {
     margin-right: -100px;
     opacity: 0.0;
     transition: opacity 1s ease;
-    
+
     a {
         color: $grey-50;
-        
+
         i {
             font-size: 50px;
         }
@@ -53,10 +55,13 @@ a {
 }
 
 .navbar {
-    background: $deep-purple-500;
+    background: transparent;
+    position: fixed;
+    width: 100vw;
     transition: opacity 0.5s ease;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16);
-    
+    z-index: 9999999999999999;
+    //box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+
     li a {
         color: $grey-50;
         transition: text-shadow .5s ease;
@@ -65,16 +70,16 @@ a {
 
     li a:hover {
         text-decoration: none;
-        text-shadow: -6px 6px 0px rgba(0,0,0,0.2),
-                    0px 0px 6px rgba(255,255,255,0.7);
+        text-shadow: -6px 6px 0px rgba(0, 0, 0, 0.2),
+            0px 0px 6px rgba(255, 255, 255, 0.7);
     }
 }
 
 .row {
     max-width: 100vw;
     margin: 0;
-    
-    & > * {
+
+    &>* {
         max-width: 100vw;
     }
 }
@@ -93,13 +98,16 @@ a {
     min-height: 100vh;
     color: $grey-50;
     margin-bottom: 0 !important;
+
     #headline {
         text-align: center;
         font-size: 15vw;
     }
+
     #about {
         text-align: center;
     }
+
     background-image: url("../assets/images/space.jpg");
     background-size: cover;
     background-position: fixed;
@@ -128,16 +136,16 @@ footer {
     margin-bottom: 0;
     padding-bottom: 0;
     text-align: center;
-    
+
     p {
         margin-bottom: 0;
         padding-bottom: 0;
     }
-    
+
     .sociallinks {
         list-style-type: none;
         padding: 0;
-        
+
         li a {
             color: $grey-50;
             transition: text-shadow .5s ease;
@@ -147,14 +155,15 @@ footer {
 
         li a:hover {
             text-decoration: none;
-            text-shadow: -6px 6px 0px rgba(0,0,0,0.2),
-                        0px 0px 6px rgba(255,255,255,0.7);
+            text-shadow: -6px 6px 0px rgba(0, 0, 0, 0.2),
+                0px 0px 6px rgba(255, 255, 255, 0.7);
         }
-    } 
+    }
 
     #copyright {
         text-align: center;
         background-color: $deep-purple-700 !important;
+
         div {
             margin: 7px;
         }
@@ -164,43 +173,54 @@ footer {
         color: $grey-50 !important;
         border-bottom: 1px solid $grey-50 !important;
     }
+
     .help-block {
         color: $grey-50 !important;
     }
+
     ::-webkit-input-placeholder {
-       color: $grey-50 !important;
+        color: $grey-50 !important;
     }
 
-    :-moz-placeholder { /* Firefox 18- */
-       color: $grey-50 !important;  
+    :-moz-placeholder {
+        /* Firefox 18- */
+        color: $grey-50 !important;
     }
 
-    ::-moz-placeholder {  /* Firefox 19+ */
-       color: $grey-50 !important;  
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $grey-50 !important;
     }
 
-    :-ms-input-placeholder {  
-       color: $grey-50 !important;  
+    :-ms-input-placeholder {
+        color: $grey-50 !important;
     }
-    .form-control-wrapper .form-control, .form-control {
+
+    .form-control-wrapper .form-control,
+    .form-control {
         color: $grey-50 !important;
         border-bottom: 1px solid $grey-50 !important;
     }
+
     .material-input:before {
         color: $grey-50 !important;
         background-color: $grey-50 !important;
     }
-    input.form-control:focus ~ .material-input:after {
+
+    input.form-control:focus~.material-input:after {
         color: $grey-50 !important;
         background-color: $grey-50 !important;
     }
-    textarea.form-control:focus ~ .material-input:after {
+
+    textarea.form-control:focus~.material-input:after {
         color: $grey-50 !important;
         background-color: $grey-50 !important;
     }
+
     .floating-label {
         color: $grey-50 !important;
     }
+
     .btn-primary:not(.btn-link):not(.btn-flat) {
         background-color: $grey-50;
         color: $deep-purple-500;
@@ -215,7 +235,8 @@ footer {
     background-size: cover !important;
 }
 
-#projects, footer {
+#projects,
+footer {
     z-index: 10 !important;
     position: relative !important;
 }
